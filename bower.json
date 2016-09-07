@@ -21,6 +21,7 @@
     "tests"
   ],
   "dependencies": {
-    "PACE": "pace#~1.0.2"
+    "PACE": "pace#~1.0.2",
+    "datatables": "^1.10.12"
   }
 }

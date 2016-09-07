@@ -13,7 +13,7 @@ class FormBuilder extends React.Component {
     const { schema,onSubmit,isCancel,submitText } = this.props;
 
     return (
-        <Form onSubmit={onSubmit}>
+        <Form onSubmit={(values,reset)=> {onSubmit(values); reset();}}>
           {schema.map((field, k) =>{
             switch(field.type){
               case 'text':

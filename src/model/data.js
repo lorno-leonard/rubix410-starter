@@ -15,11 +15,8 @@ export function update(ref, data){
 }
 
 export function getData(ref){
-  let def = q.defer();
-
-  setTimeout(() => q.resolve(), 2000);
-
-  return def.promise;
+  console.log('Retreiving', ref);
+  return firebase.database().ref(ref).once('value');
 }
 
 export function removeData(ref){

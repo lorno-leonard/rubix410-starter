@@ -42,21 +42,6 @@ class ApplicationSidebar extends React.Component {
   }
 }
 
-class DummySidebar extends React.Component {
-  render() {
-    return (
-      <Grid>
-        <Row>
-          <Col xs={12}>
-            <div className='sidebar-header'>DUMMY SIDEBAR</div>
-            <LoremIpsum query='1p' />
-          </Col>
-        </Row>
-      </Grid>
-    );
-  }
-}
-
 @withRouter
 export default class SidebarContainer extends React.Component {
   render() {
@@ -90,18 +75,6 @@ export default class SidebarContainer extends React.Component {
         <div id='sidebar-container'>
           <Sidebar sidebar={0}>
             <ApplicationSidebar />
-          </Sidebar>
-          <Sidebar sidebar={1}>
-            <DummySidebar />
-          </Sidebar>
-          <Sidebar sidebar={2}>
-            <DummySidebar />
-          </Sidebar>
-          <Sidebar sidebar={3}>
-            <DummySidebar />
-          </Sidebar>
-          <Sidebar sidebar={4}>
-            <DummySidebar />
           </Sidebar>
         </div>
       </div>

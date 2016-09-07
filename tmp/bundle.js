@@ -54,7 +54,7 @@ require('source-map-support').install({environment: 'node'});
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';var _path=__webpack_require__(2);var _path2=_interopRequireDefault(_path);var _express=__webpack_require__(3);var _express2=_interopRequireDefault(_express);var _compression=__webpack_require__(4);var _compression2=_interopRequireDefault(_compression);var _cookieParser=__webpack_require__(5);var _cookieParser2=_interopRequireDefault(_cookieParser);var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _server=__webpack_require__(7);var _server2=_interopRequireDefault(_server);var _routes=__webpack_require__(166);var _routes2=_interopRequireDefault(_routes);var _router=__webpack_require__(723);var _RubixAssetMiddleware=__webpack_require__(736);var _RubixAssetMiddleware2=_interopRequireDefault(_RubixAssetMiddleware);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var port=process.env.PORT||8080;var app=(0,_express2.default)();app.use((0,_compression2.default)());app.use((0,_cookieParser2.default)());app.use(_express2.default.static(_path2.default.join(process.cwd(),'public')));app.set('views',_path2.default.join(process.cwd(),'views'));app.set('view engine','pug');function renderHTML(req,res){(0,_router.renderHTMLString)(_routes2.default,req,function(error,redirectLocation,html){if(error){if(error.message==='Not found'){res.status(404).send(error.message);}else{res.status(500).send(error.message);}}else if(redirectLocation){res.redirect(302,redirectLocation.pathname+redirectLocation.search);}else{res.render('index',{content:html});}});}app.get('*',(0,_RubixAssetMiddleware2.default)('ltr'),function(req,res,next){renderHTML(req,res);});app.listen(port,function(){console.log('Node.js app is running at http://localhost:'+port+'/');});;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(port,'port','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/server.babel.js');__REACT_HOT_LOADER__.register(app,'app','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/server.babel.js');__REACT_HOT_LOADER__.register(renderHTML,'renderHTML','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/server.babel.js');})();;
+	'use strict';var _path=__webpack_require__(2);var _path2=_interopRequireDefault(_path);var _express=__webpack_require__(3);var _express2=_interopRequireDefault(_express);var _compression=__webpack_require__(4);var _compression2=_interopRequireDefault(_compression);var _cookieParser=__webpack_require__(5);var _cookieParser2=_interopRequireDefault(_cookieParser);var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _server=__webpack_require__(7);var _server2=_interopRequireDefault(_server);var _routes=__webpack_require__(166);var _routes2=_interopRequireDefault(_routes);var _router=__webpack_require__(724);var _RubixAssetMiddleware=__webpack_require__(737);var _RubixAssetMiddleware2=_interopRequireDefault(_RubixAssetMiddleware);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var port=process.env.PORT||8080;var app=(0,_express2.default)();app.use((0,_compression2.default)());app.use((0,_cookieParser2.default)());app.use(_express2.default.static(_path2.default.join(process.cwd(),'public')));app.set('views',_path2.default.join(process.cwd(),'views'));app.set('view engine','pug');function renderHTML(req,res){(0,_router.renderHTMLString)(_routes2.default,req,function(error,redirectLocation,html){if(error){if(error.message==='Not found'){res.status(404).send(error.message);}else{res.status(500).send(error.message);}}else if(redirectLocation){res.redirect(302,redirectLocation.pathname+redirectLocation.search);}else{res.render('index',{content:html});}});}app.get('*',(0,_RubixAssetMiddleware2.default)('ltr'),function(req,res,next){renderHTML(req,res);});app.listen(port,function(){console.log('Node.js app is running at http://localhost:'+port+'/');});;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(port,'port','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/server.babel.js');__REACT_HOT_LOADER__.register(app,'app','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/server.babel.js');__REACT_HOT_LOADER__.register(renderHTML,'renderHTML','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/server.babel.js');})();;
 
 /***/ },
 /* 2 */
@@ -19707,7 +19707,7 @@ require('source-map-support').install({environment: 'node'});
 /* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;var _classCallCheck2=__webpack_require__(167);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(168);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(237);var _inherits3=_interopRequireDefault(_inherits2);var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _classnames=__webpack_require__(245);var _classnames2=_interopRequireDefault(_classnames);var _reactRouter=__webpack_require__(246);var _rubix=__webpack_require__(247);var _footer=__webpack_require__(578);var _footer2=_interopRequireDefault(_footer);var _header=__webpack_require__(579);var _header2=_interopRequireDefault(_header);var _sidebar=__webpack_require__(580);var _sidebar2=_interopRequireDefault(_sidebar);var _home=__webpack_require__(581);var _home2=_interopRequireDefault(_home);var _Login=__webpack_require__(582);var _Login2=_interopRequireDefault(_Login);var _Locations=__webpack_require__(586);var _Locations2=_interopRequireDefault(_Locations);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var App=function(_React$Component){(0,_inherits3.default)(App,_React$Component);function App(){(0,_classCallCheck3.default)(this,App);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}App.prototype.render=function render(){return _react2.default.createElement(_rubix.MainContainer,this.props,_react2.default.createElement(_sidebar2.default,null),_react2.default.createElement(_header2.default,null),_react2.default.createElement('div',{id:'body'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},this.props.children)))),_react2.default.createElement(_footer2.default,null));};return App;}(_react2.default.Component);var _default=_react2.default.createElement(_reactRouter.Route,null,_react2.default.createElement(_reactRouter.Route,null,_react2.default.createElement(_reactRouter.Route,{path:'login',component:_Login2.default})),_react2.default.createElement(_reactRouter.Route,{path:'/',component:App},_react2.default.createElement(_reactRouter.IndexRoute,{component:_home2.default}),_react2.default.createElement(_reactRouter.Route,{path:'locations',component:_Locations2.default}),_react2.default.createElement(_reactRouter.Route,{path:'locations/:id',component:_Locations2.default})));exports.default=_default;;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(App,'App','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/routes.js');__REACT_HOT_LOADER__.register(_default,'default','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/routes.js');})();;
+	'use strict';exports.__esModule=true;var _classCallCheck2=__webpack_require__(167);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(168);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(237);var _inherits3=_interopRequireDefault(_inherits2);var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _classnames=__webpack_require__(245);var _classnames2=_interopRequireDefault(_classnames);var _reactRouter=__webpack_require__(246);var _rubix=__webpack_require__(247);var _footer=__webpack_require__(578);var _footer2=_interopRequireDefault(_footer);var _header=__webpack_require__(579);var _header2=_interopRequireDefault(_header);var _sidebar=__webpack_require__(580);var _sidebar2=_interopRequireDefault(_sidebar);var _home=__webpack_require__(581);var _home2=_interopRequireDefault(_home);var _Login=__webpack_require__(582);var _Login2=_interopRequireDefault(_Login);var _index=__webpack_require__(589);var _index2=_interopRequireDefault(_index);var _Manage=__webpack_require__(716);var _Manage2=_interopRequireDefault(_Manage);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var App=function(_React$Component){(0,_inherits3.default)(App,_React$Component);function App(){(0,_classCallCheck3.default)(this,App);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}App.prototype.render=function render(){return _react2.default.createElement(_rubix.MainContainer,this.props,_react2.default.createElement('div',{id:'body'},_react2.default.createElement(_header2.default,null),_react2.default.createElement(_sidebar2.default,null),_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},this.props.children)))),_react2.default.createElement(_footer2.default,null));};return App;}(_react2.default.Component);var _default=_react2.default.createElement(_reactRouter.Route,null,_react2.default.createElement(_reactRouter.Route,null,_react2.default.createElement(_reactRouter.Route,{path:'login',component:_Login2.default}),_react2.default.createElement(_reactRouter.Route,{path:'locations',component:_index2.default})),_react2.default.createElement(_reactRouter.Route,{path:'/',component:App},_react2.default.createElement(_reactRouter.IndexRoute,{component:_home2.default}),_react2.default.createElement(_reactRouter.Route,{path:'locations/add',component:_Manage2.default}),_react2.default.createElement(_reactRouter.Route,{path:'locations/:id',component:_Manage2.default})));exports.default=_default;;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(App,'App','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/routes.js');__REACT_HOT_LOADER__.register(_default,'default','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/routes.js');})();;
 
 /***/ },
 /* 167 */
@@ -47852,7 +47852,7 @@ require('source-map-support').install({environment: 'node'});
 /* 580 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(167);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(168);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(237);var _inherits3=_interopRequireDefault(_inherits2);var _class,_class2;var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _rubix=__webpack_require__(247);var _reactRouter=__webpack_require__(246);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var ApplicationSidebar=(0,_reactRouter.withRouter)(_class=function(_React$Component){(0,_inherits3.default)(ApplicationSidebar,_React$Component);function ApplicationSidebar(){(0,_classCallCheck3.default)(this,ApplicationSidebar);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}ApplicationSidebar.prototype.handleChange=function handleChange(e){this._nav.search(e.target.value);};ApplicationSidebar.prototype.render=function render(){var _this2=this;return _react2.default.createElement('div',null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.FormControl,{type:'text',placeholder:'Search...',onChange:this.handleChange.bind(this),className:'sidebar-search',style:{border:'none',background:'none',margin:'10px 0 0 0',borderBottom:'1px solid #666',color:'white'}}),_react2.default.createElement('div',{className:'sidebar-nav-container'},_react2.default.createElement(_rubix.SidebarNav,{style:{marginBottom:0},ref:function ref(c){return _this2._nav=c;}},_react2.default.createElement('div',{className:'sidebar-header'},'PAGES'),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Dashboard',href:'/'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Locations',href:'/locations'})))))));};return ApplicationSidebar;}(_react2.default.Component))||_class;var DummySidebar=function(_React$Component2){(0,_inherits3.default)(DummySidebar,_React$Component2);function DummySidebar(){(0,_classCallCheck3.default)(this,DummySidebar);return(0,_possibleConstructorReturn3.default)(this,_React$Component2.apply(this,arguments));}DummySidebar.prototype.render=function render(){return _react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement('div',{className:'sidebar-header'},'DUMMY SIDEBAR'),_react2.default.createElement(_rubix.LoremIpsum,{query:'1p'}))));};return DummySidebar;}(_react2.default.Component);var SidebarContainer=(0,_reactRouter.withRouter)(_class2=function(_React$Component3){(0,_inherits3.default)(SidebarContainer,_React$Component3);function SidebarContainer(){(0,_classCallCheck3.default)(this,SidebarContainer);return(0,_possibleConstructorReturn3.default)(this,_React$Component3.apply(this,arguments));}SidebarContainer.prototype.render=function render(){return _react2.default.createElement('div',{id:'sidebar'},_react2.default.createElement('div',{id:'avatar'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,{className:'fg-white'},_react2.default.createElement(_rubix.Col,{xs:4,collapseRight:true},_react2.default.createElement('img',{src:'/imgs/app/avatars/avatar0.png',width:'40',height:'40'})),_react2.default.createElement(_rubix.Col,{xs:8,collapseLeft:true,id:'avatar-col'},_react2.default.createElement('div',{style:{top:23,fontSize:16,lineHeight:1,position:'relative'}},'Anna Sanchez'),_react2.default.createElement('div',null,_react2.default.createElement(_rubix.Progress,{id:'demo-progress',value:30,color:'#ffffff'}),_react2.default.createElement('a',{href:'#'},_react2.default.createElement(_rubix.Icon,{id:'demo-icon',bundle:'fontello',glyph:'lock-5'}))))))),_react2.default.createElement(_rubix.SidebarControls,null,_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'docs',sidebar:0}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'chat-1',sidebar:1}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'chart-pie-2',sidebar:2}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'th-list-2',sidebar:3}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'bell-5',sidebar:4})),_react2.default.createElement('div',{id:'sidebar-container'},_react2.default.createElement(_rubix.Sidebar,{sidebar:0},_react2.default.createElement(ApplicationSidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:1},_react2.default.createElement(DummySidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:2},_react2.default.createElement(DummySidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:3},_react2.default.createElement(DummySidebar,null)),_react2.default.createElement(_rubix.Sidebar,{sidebar:4},_react2.default.createElement(DummySidebar,null))));};return SidebarContainer;}(_react2.default.Component))||_class2;exports.default=SidebarContainer;;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(ApplicationSidebar,'ApplicationSidebar','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/common/sidebar.js');__REACT_HOT_LOADER__.register(DummySidebar,'DummySidebar','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/common/sidebar.js');__REACT_HOT_LOADER__.register(SidebarContainer,'SidebarContainer','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/common/sidebar.js');})();;
+	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(167);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(168);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(237);var _inherits3=_interopRequireDefault(_inherits2);var _class,_class2;var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _rubix=__webpack_require__(247);var _reactRouter=__webpack_require__(246);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var ApplicationSidebar=(0,_reactRouter.withRouter)(_class=function(_React$Component){(0,_inherits3.default)(ApplicationSidebar,_React$Component);function ApplicationSidebar(){(0,_classCallCheck3.default)(this,ApplicationSidebar);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}ApplicationSidebar.prototype.handleChange=function handleChange(e){this._nav.search(e.target.value);};ApplicationSidebar.prototype.render=function render(){var _this2=this;return _react2.default.createElement('div',null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.FormControl,{type:'text',placeholder:'Search...',onChange:this.handleChange.bind(this),className:'sidebar-search',style:{border:'none',background:'none',margin:'10px 0 0 0',borderBottom:'1px solid #666',color:'white'}}),_react2.default.createElement('div',{className:'sidebar-nav-container'},_react2.default.createElement(_rubix.SidebarNav,{style:{marginBottom:0},ref:function ref(c){return _this2._nav=c;}},_react2.default.createElement('div',{className:'sidebar-header'},'PAGES'),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Dashboard',href:'/'}),_react2.default.createElement(_rubix.SidebarNavItem,{glyph:'icon-fontello-gauge',name:'Locations',href:'/locations'})))))));};return ApplicationSidebar;}(_react2.default.Component))||_class;var SidebarContainer=(0,_reactRouter.withRouter)(_class2=function(_React$Component2){(0,_inherits3.default)(SidebarContainer,_React$Component2);function SidebarContainer(){(0,_classCallCheck3.default)(this,SidebarContainer);return(0,_possibleConstructorReturn3.default)(this,_React$Component2.apply(this,arguments));}SidebarContainer.prototype.render=function render(){return _react2.default.createElement('div',{id:'sidebar'},_react2.default.createElement('div',{id:'avatar'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,{className:'fg-white'},_react2.default.createElement(_rubix.Col,{xs:4,collapseRight:true},_react2.default.createElement('img',{src:'/imgs/app/avatars/avatar0.png',width:'40',height:'40'})),_react2.default.createElement(_rubix.Col,{xs:8,collapseLeft:true,id:'avatar-col'},_react2.default.createElement('div',{style:{top:23,fontSize:16,lineHeight:1,position:'relative'}},'Anna Sanchez'),_react2.default.createElement('div',null,_react2.default.createElement(_rubix.Progress,{id:'demo-progress',value:30,color:'#ffffff'}),_react2.default.createElement('a',{href:'#'},_react2.default.createElement(_rubix.Icon,{id:'demo-icon',bundle:'fontello',glyph:'lock-5'}))))))),_react2.default.createElement(_rubix.SidebarControls,null,_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'docs',sidebar:0}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'chat-1',sidebar:1}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'chart-pie-2',sidebar:2}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'th-list-2',sidebar:3}),_react2.default.createElement(_rubix.SidebarControlBtn,{bundle:'fontello',glyph:'bell-5',sidebar:4})),_react2.default.createElement('div',{id:'sidebar-container'},_react2.default.createElement(_rubix.Sidebar,{sidebar:0},_react2.default.createElement(ApplicationSidebar,null))));};return SidebarContainer;}(_react2.default.Component))||_class2;exports.default=SidebarContainer;;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(ApplicationSidebar,'ApplicationSidebar','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/common/sidebar.js');__REACT_HOT_LOADER__.register(SidebarContainer,'SidebarContainer','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/common/sidebar.js');})();;
 
 /***/ },
 /* 581 */
@@ -47864,7 +47864,7 @@ require('source-map-support').install({environment: 'node'});
 /* 582 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(167);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(168);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(237);var _inherits3=_interopRequireDefault(_inherits2);var _class;var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _classnames=__webpack_require__(245);var _classnames2=_interopRequireDefault(_classnames);var _reactRouter=__webpack_require__(246);var _firebase=__webpack_require__(583);var _firebase2=_interopRequireDefault(_firebase);var _formsyReact=__webpack_require__(584);var _FormBuilder=__webpack_require__(713);var _FormBuilder2=_interopRequireDefault(_FormBuilder);var _rubix=__webpack_require__(247);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Login=(0,_reactRouter.withRouter)(_class=function(_React$Component){(0,_inherits3.default)(Login,_React$Component);function Login(props,context){(0,_classCallCheck3.default)(this,Login);var _this=(0,_possibleConstructorReturn3.default)(this,_React$Component.call(this,props,context));_this.state={result:null};return _this;}Login.prototype.back=function back(e){e.preventDefault();e.stopPropagation();this.props.router.goBack();};Login.prototype.componentDidMount=function componentDidMount(){$('html').addClass('authentication');};Login.prototype.componentWillUnmount=function componentWillUnmount(){$('html').removeClass('authentication');};Login.prototype.getSchema=function getSchema(){return[{title:"Username",id:"country",type:"text",default:"kuwait",props:{componentClass:"select",name:"username"}},{title:"Password",id:"password",type:"text",props:{type:"password",name:"password",placeholder:"******"}}];};Login.prototype.setResult=function setResult(message,type){this.setState({result:{type:type,message:message}});};Login.prototype.renderResult=function renderResult(){var _state$result=this.state.result;var type=_state$result.type;var message=_state$result.message;return _react2.default.createElement(_rubix.Alert,{bsStyle:type},_react2.default.createElement('span',null,message));};Login.prototype.goLogin=function goLogin(){var _this2=this;this.setResult("You are successfully logged in, please wait... ","success");setTimeout(function(_){return _this2.props.router.push('/');},2000);};Login.prototype.onSubmit=function onSubmit(values){var _this3=this;console.log("Authntication with:",values);var username=values.username;var password=values.password;_firebase2.default.auth().signInWithEmailAndPassword(username,password).then(function(_){return _this3.goLogin();}).catch(function(e){return _this3.setResult(e.message,"danger");});};Login.prototype.render=function render(){var result=this.state.result!==null?this.renderResult.call(this):null;var schema=this.getSchema();return _react2.default.createElement('div',{id:'auth-container',className:'login'},_react2.default.createElement('div',{id:'auth-row'},_react2.default.createElement('div',{id:'auth-cell'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{sm:4,smOffset:4,xs:10,xsOffset:1,collapseLeft:true,collapseRight:true},_react2.default.createElement(_rubix.PanelContainer,null,_react2.default.createElement(_rubix.Panel,null,_react2.default.createElement(_rubix.PanelBody,{style:{padding:0}},_react2.default.createElement('div',{className:'text-center bg-darkblue fg-white'},_react2.default.createElement('h3',{style:{margin:0,padding:25}},'Sign in to Simsar admin panel')),_react2.default.createElement('div',null,result,_react2.default.createElement('div',{style:{padding:25,paddingTop:0,paddingBottom:0,margin:'auto',marginBottom:25,marginTop:25}},_react2.default.createElement(_FormBuilder2.default,{submitText:"Login",schema:schema,isCancel:false,onSubmit:this.onSubmit.bind(this)}))))))))))));};return Login;}(_react2.default.Component))||_class;exports.default=Login;;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(Login,'Login','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/routes/Login.js');})();;
+	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(167);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(168);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(237);var _inherits3=_interopRequireDefault(_inherits2);var _class;var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _classnames=__webpack_require__(245);var _classnames2=_interopRequireDefault(_classnames);var _reactRouter=__webpack_require__(246);var _firebase=__webpack_require__(583);var _firebase2=_interopRequireDefault(_firebase);var _formsyReact=__webpack_require__(584);var _FormBuilder=__webpack_require__(585);var _FormBuilder2=_interopRequireDefault(_FormBuilder);var _rubix=__webpack_require__(247);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Login=(0,_reactRouter.withRouter)(_class=function(_React$Component){(0,_inherits3.default)(Login,_React$Component);function Login(props,context){(0,_classCallCheck3.default)(this,Login);var _this=(0,_possibleConstructorReturn3.default)(this,_React$Component.call(this,props,context));_this.state={result:null};return _this;}Login.prototype.back=function back(e){e.preventDefault();e.stopPropagation();this.props.router.goBack();};Login.prototype.componentDidMount=function componentDidMount(){$('html').addClass('authentication');};Login.prototype.componentWillUnmount=function componentWillUnmount(){$('html').removeClass('authentication');};Login.prototype.getSchema=function getSchema(){return[{title:"Username",id:"country",type:"text",default:"kuwait",props:{componentClass:"select",name:"username"}},{title:"Password",id:"password",type:"text",props:{type:"password",name:"password",placeholder:"******"}}];};Login.prototype.setResult=function setResult(message,type){this.setState({result:{type:type,message:message}});};Login.prototype.renderResult=function renderResult(){var _state$result=this.state.result;var type=_state$result.type;var message=_state$result.message;return _react2.default.createElement(_rubix.Alert,{bsStyle:type},_react2.default.createElement('span',null,message));};Login.prototype.goLogin=function goLogin(){var _this2=this;this.setResult("You are successfully logged in, please wait... ","success");setTimeout(function(_){return _this2.props.router.push('/');},2000);};Login.prototype.onSubmit=function onSubmit(values){var _this3=this;console.log("Authntication with:",values);var username=values.username;var password=values.password;_firebase2.default.auth().signInWithEmailAndPassword(username,password).then(function(_){return _this3.goLogin();}).catch(function(e){return _this3.setResult(e.message,"danger");});};Login.prototype.render=function render(){var result=this.state.result!==null?this.renderResult.call(this):null;var schema=this.getSchema();return _react2.default.createElement('div',{id:'auth-container',className:'login'},_react2.default.createElement('div',{id:'auth-row'},_react2.default.createElement('div',{id:'auth-cell'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{sm:4,smOffset:4,xs:10,xsOffset:1,collapseLeft:true,collapseRight:true},_react2.default.createElement(_rubix.PanelContainer,null,_react2.default.createElement(_rubix.Panel,null,_react2.default.createElement(_rubix.PanelBody,{style:{padding:0}},_react2.default.createElement('div',{className:'text-center bg-darkblue fg-white'},_react2.default.createElement('h3',{style:{margin:0,padding:25}},'Sign in to Simsar admin panel')),_react2.default.createElement('div',null,result,_react2.default.createElement('div',{style:{padding:25,paddingTop:0,paddingBottom:0,margin:'auto',marginBottom:25,marginTop:25}},_react2.default.createElement(_FormBuilder2.default,{submitText:"Login",schema:schema,isCancel:false,onSubmit:this.onSubmit.bind(this)}))))))))))));};return Login;}(_react2.default.Component))||_class;exports.default=Login;;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(Login,'Login','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/routes/Login.js');})();;
 
 /***/ },
 /* 583 */
@@ -47882,22 +47882,40 @@ require('source-map-support').install({environment: 'node'});
 /* 585 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;var _classCallCheck2=__webpack_require__(167);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(168);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(237);var _inherits3=_interopRequireDefault(_inherits2);var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _formsyReact=__webpack_require__(584);var _rubix=__webpack_require__(247);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Input=function(_React$Component){(0,_inherits3.default)(Input,_React$Component);function Input(props){(0,_classCallCheck3.default)(this,Input);return(0,_possibleConstructorReturn3.default)(this,_React$Component.call(this,props));}Input.prototype.render=function render(){var _this2=this;var _props=this.props;var controlId=_props.controlId;var type=_props.type;var placeholder=_props.placeholder;var bsSize=_props.bsSize;var label=_props.label;return _react2.default.createElement(_rubix.FormGroup,{controlId:controlId},_react2.default.createElement(_rubix.ControlLabel,null,label),_react2.default.createElement(_rubix.FormControl,{value:this.props.getValue(),type:type,onChange:function onChange(e){return _this2.props.setValue(e.target.value);},className:'border-focus-blue',placeholder:placeholder}));};return Input;}(_react2.default.Component);Input.defaultProps={bsSize:"sm",type:"text",placeholder:'',label:""};var _default=(0,_formsyReact.HOC)(Input);exports.default=_default;;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(Input,'Input','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/form/Input.js');__REACT_HOT_LOADER__.register(_default,'default','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/form/Input.js');})();;
+	'use strict';exports.__esModule=true;var _extends2=__webpack_require__(249);var _extends3=_interopRequireDefault(_extends2);var _classCallCheck2=__webpack_require__(167);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(168);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(237);var _inherits3=_interopRequireDefault(_inherits2);var _formsyReact=__webpack_require__(584);var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _rubix=__webpack_require__(247);var _Input=__webpack_require__(586);var _Input2=_interopRequireDefault(_Input);var _Select=__webpack_require__(587);var _Select2=_interopRequireDefault(_Select);var _Dynamic=__webpack_require__(588);var _Dynamic2=_interopRequireDefault(_Dynamic);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var FormBuilder=function(_React$Component){(0,_inherits3.default)(FormBuilder,_React$Component);function FormBuilder(){(0,_classCallCheck3.default)(this,FormBuilder);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}FormBuilder.prototype.render=function render(){var _props=this.props;var schema=_props.schema;var _onSubmit=_props.onSubmit;var isCancel=_props.isCancel;var submitText=_props.submitText;return _react2.default.createElement(_formsyReact.Form,{onSubmit:function onSubmit(values,reset){_onSubmit(values);reset();}},schema.map(function(field,k){switch(field.type){case'text':return _react2.default.createElement(_Input2.default,(0,_extends3.default)({key:k,type:field.type,id:field.id,label:field.title,controlId:field.id},field.props));case'select':return _react2.default.createElement(_Select2.default,(0,_extends3.default)({key:k,value:field.default,label:field.title,controlId:field.id},field.props));case"dynamic":return _react2.default.createElement(_Dynamic2.default,(0,_extends3.default)({id:field.id,key:k,controlId:field.id},field.props));break;}}),_react2.default.createElement('div',{style:{margin:"10px 0"}},isCancel&&_react2.default.createElement(_rubix.Button,{type:'submit',bsStyle:'lightgreen'},'cancel'),' ',_react2.default.createElement('button',{className:'btn-primary btn btn-default'},submitText)));};return FormBuilder;}(_react2.default.Component);FormBuilder.defaultProps={isCancel:true,submitText:"submit"};FormBuilder.propTypes={schema:_react2.default.PropTypes.array.isRequired,onSubmit:_react2.default.PropTypes.func.isRequired};var _default=FormBuilder;exports.default=_default;;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(FormBuilder,'FormBuilder','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/form/FormBuilder.js');__REACT_HOT_LOADER__.register(_default,'default','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/form/FormBuilder.js');})();;
 
 /***/ },
 /* 586 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(167);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(168);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(237);var _inherits3=_interopRequireDefault(_inherits2);var _class;var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _foreach=__webpack_require__(587);var _foreach2=_interopRequireDefault(_foreach);var _pull=__webpack_require__(697);var _pull2=_interopRequireDefault(_pull);var _remove=__webpack_require__(708);var _remove2=_interopRequireDefault(_remove);var _reactRouter=__webpack_require__(246);var _FormBuilder=__webpack_require__(713);var _FormBuilder2=_interopRequireDefault(_FormBuilder);var _areas=__webpack_require__(716);var _locations=__webpack_require__(721);var _locationAreas=__webpack_require__(722);var _rubix=__webpack_require__(247);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var LocationForm=function(_React$Component){(0,_inherits3.default)(LocationForm,_React$Component);function LocationForm(props,state){(0,_classCallCheck3.default)(this,LocationForm);var _this=(0,_possibleConstructorReturn3.default)(this,_React$Component.call(this,props,state));_this.state={edit:_this.props.params.id!=='undefined'};return _this;}LocationForm.prototype.componentWillMount=function componentWillMount(){var edit=this.state.edit;var locationId=this.props.params.id;if(edit===true){(0,_locations.loadLocation)(locationId).then(function(locationSnapshot){console.log('LOADED!',locationSnapshot);});}};LocationForm.prototype.getSchema=function getSchema(){return[{title:"Country",id:"country",type:"select",default:"kuwait",props:{componentClass:"select",name:"country",options:[{id:"kuwait",title:"Kuwait"},{id:"egypt",title:"Egypt"},{id:"ksa",title:"KSA"},{id:"qatar",title:"Qatar"}]}},{title:"Title",id:"title",type:"text",props:{type:"text",name:"title",placeholder:"Location title"}},{title:"Areas",id:"areas",type:"dynamic",props:{title:"Area",type:"text",placeholder:"Area title ..."}}];};LocationForm.prototype.onSubmit=function onSubmit(values){console.log('Values',values);var locationTitle=values.title;(0,_areas.push)(values.areas).then(function(snapshot){var locationId=(0,_locations.push)({title:locationTitle});var areaIds=snapshot.map(function(area){return area.areaId;});(0,_locationAreas.set)(locationId,areaIds);});};LocationForm.prototype.render=function render(){var schema=this.getSchema();return _react2.default.createElement(_rubix.PanelContainer,{noOverflow:true},_react2.default.createElement(_rubix.Panel,null,_react2.default.createElement(_rubix.PanelHeader,{className:'bg-green fg-white'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement('h3',null,'Add new location '))))),_react2.default.createElement(_rubix.PanelBody,null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_FormBuilder2.default,{schema:schema,onSubmit:this.onSubmit})))))));};return LocationForm;}(_react2.default.Component);LocationForm.contextTypes={langs:_react2.default.PropTypes.array};var Locations=(0,_reactRouter.withRouter)(_class=function(_React$Component2){(0,_inherits3.default)(Locations,_React$Component2);function Locations(){(0,_classCallCheck3.default)(this,Locations);return(0,_possibleConstructorReturn3.default)(this,_React$Component2.apply(this,arguments));}Locations.prototype.render=function render(){return _react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{sm:6,collapseRight:true},_react2.default.createElement(LocationForm,this.props)));};return Locations;}(_react2.default.Component))||_class;exports.default=Locations;;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(LocationForm,'LocationForm','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/routes/Locations.js');__REACT_HOT_LOADER__.register(Locations,'Locations','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/routes/Locations.js');})();;
+	'use strict';exports.__esModule=true;var _classCallCheck2=__webpack_require__(167);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(168);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(237);var _inherits3=_interopRequireDefault(_inherits2);var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _formsyReact=__webpack_require__(584);var _rubix=__webpack_require__(247);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Input=function(_React$Component){(0,_inherits3.default)(Input,_React$Component);function Input(props){(0,_classCallCheck3.default)(this,Input);return(0,_possibleConstructorReturn3.default)(this,_React$Component.call(this,props));}Input.prototype.render=function render(){var _this2=this;var _props=this.props;var controlId=_props.controlId;var type=_props.type;var placeholder=_props.placeholder;var bsSize=_props.bsSize;var label=_props.label;return _react2.default.createElement(_rubix.FormGroup,{controlId:controlId},_react2.default.createElement(_rubix.ControlLabel,null,label),_react2.default.createElement(_rubix.FormControl,{value:this.props.getValue(),type:type,onChange:function onChange(e){return _this2.props.setValue(e.target.value);},className:'border-focus-blue',placeholder:placeholder}));};return Input;}(_react2.default.Component);Input.defaultProps={bsSize:"sm",type:"text",placeholder:'',label:""};var _default=(0,_formsyReact.HOC)(Input);exports.default=_default;;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(Input,'Input','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/form/Input.js');__REACT_HOT_LOADER__.register(_default,'default','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/form/Input.js');})();;
 
 /***/ },
 /* 587 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var arrayEach = __webpack_require__(588),
-	    baseEach = __webpack_require__(589),
-	    baseIteratee = __webpack_require__(610),
-	    isArray = __webpack_require__(603);
+	'use strict';exports.__esModule=true;var _classCallCheck2=__webpack_require__(167);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(168);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(237);var _inherits3=_interopRequireDefault(_inherits2);var _rubix=__webpack_require__(247);var _formsyReact=__webpack_require__(584);var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Select=function(_React$Component){(0,_inherits3.default)(Select,_React$Component);function Select(){(0,_classCallCheck3.default)(this,Select);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}Select.prototype.render=function render(){var _this2=this;var _props=this.props;var label=_props.label;var controlId=_props.controlId;return _react2.default.createElement(_rubix.FormGroup,{controlId:controlId},_react2.default.createElement(_rubix.ControlLabel,null,label),_react2.default.createElement(_rubix.FormControl,{componentClass:'select',placeholder:'select',value:this.props.getValue(),onChange:function onChange(e){return _this2.props.setValue(e.target.value);}},this.props.options.map(function(option){return _react2.default.createElement('option',{key:option.id,value:option.id},option.title);})));};return Select;}(_react2.default.Component);var _default=(0,_formsyReact.HOC)(Select);exports.default=_default;;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(Select,'Select','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/form/Select.js');__REACT_HOT_LOADER__.register(_default,'default','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/form/Select.js');})();;
+
+/***/ },
+/* 588 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(167);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(168);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(237);var _inherits3=_interopRequireDefault(_inherits2);var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _Input=__webpack_require__(586);var _Input2=_interopRequireDefault(_Input);var _Select=__webpack_require__(587);var _Select2=_interopRequireDefault(_Select);var _rubix=__webpack_require__(247);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Fields=function Fields(_ref){var fields=_ref.fields;var type=_ref.type;var title=_ref.title;var id=_ref.id;var onRemoveField=_ref.onRemoveField;function onRemove(e,pos){e.preventDefault();onRemoveField(pos);}return _react2.default.createElement('div',null,fields.map(function(field,k){var _React$createElement;var resultField=void 0;switch(type){case'text':resultField=_react2.default.createElement(_Input2.default,(_React$createElement={type:'text',controlId:id+'['+k+']',label:title},_React$createElement['type']='text',_React$createElement.name=id+'['+k+']',_React$createElement));break;case'select':resultField=_react2.default.createElement(_Select2.default,{controlId:id+'['+k+']',label:title,name:title+'['+k+']'});break;}return _react2.default.createElement(_rubix.Grid,{key:title+'['+k+']',style:{paddingTop:"15px"}},_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.BPanel,null,_react2.default.createElement(_rubix.Col,{md:10},resultField),_react2.default.createElement(_rubix.Col,{md:2,style:{paddingTop:"25px"}},_react2.default.createElement(_rubix.Button,{href:'#',bsStyle:'danger',onClick:function onClick(e){return onRemove(e,k);}},'X')))));}));};var Dynamic=function(_Component){(0,_inherits3.default)(Dynamic,_Component);function Dynamic(property,state){(0,_classCallCheck3.default)(this,Dynamic);var _this=(0,_possibleConstructorReturn3.default)(this,_Component.call(this,property));_this.state={fields:[]};return _this;}Dynamic.prototype.appendField=function appendField(){this.setState({fields:this.state.fields.concat(this.props.title+'-'+this.state.fields.length)});};Dynamic.prototype.removeField=function removeField(pos){var fields=this.state.fields;this.setState({fields:fields.slice(0,pos).concat(fields.slice(pos+1))});};Dynamic.prototype.render=function render(){var _this2=this;var _props=this.props;var type=_props.type;var title=_props.title;var id=_props.id;var fields=this.state.fields;return _react2.default.createElement('div',null,_react2.default.createElement('div',{className:'clearfix'},_react2.default.createElement(_rubix.Button,{bsClass:'pull-right btn-primary btn-default btn',type:'button',onClick:function onClick(){return _this2.appendField();}},'Add ',title,' ')),_react2.default.createElement(Fields,{fields:fields,id:id,type:type,title:title,onRemoveField:function onRemoveField(pos){return _this2.removeField(pos);}}));};return Dynamic;}(_react.Component);exports.default=Dynamic;;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(Fields,'Fields','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/form/Dynamic.js');__REACT_HOT_LOADER__.register(Dynamic,'Dynamic','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/form/Dynamic.js');})();;
+
+/***/ },
+/* 589 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(167);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(168);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(237);var _inherits3=_interopRequireDefault(_inherits2);var _class;var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _reactDom=__webpack_require__(262);var _reactDom2=_interopRequireDefault(_reactDom);var _foreach=__webpack_require__(590);var _foreach2=_interopRequireDefault(_foreach);var _pull=__webpack_require__(700);var _pull2=_interopRequireDefault(_pull);var _remove=__webpack_require__(711);var _remove2=_interopRequireDefault(_remove);var _locations=__webpack_require__(722);var _reactRouter=__webpack_require__(246);var _rubix=__webpack_require__(247);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var LocationsList=function(_React$Component){(0,_inherits3.default)(LocationsList,_React$Component);function LocationsList(props){(0,_classCallCheck3.default)(this,LocationsList);var _this=(0,_possibleConstructorReturn3.default)(this,_React$Component.call(this,props));_this.state={locations:{},loaded:false};return _this;}LocationsList.prototype.componentWillMount=function componentWillMount(){var _this2=this;(0,_locations.loadLocations)().then(function(locations){return _this2.setState({locations:locations.val(),loaded:true});});};LocationsList.prototype.componentDidMount=function componentDidMount(){$(_reactDom2.default.findDOMNode(this.locationTable)).addClass('nowrap').dataTable({responsive:true,columnDefs:[{targets:[-1,-3],className:'dt-body-right'}]});};LocationsList.prototype.render=function render(){var _this3=this;if(!this.state.loaded)return null;var rows=[];(0,_foreach2.default)(this.state.locations,function(v,k){rows.push(_react2.default.createElement('tr',{key:k},_react2.default.createElement('td',null,_react2.default.createElement(_reactRouter.Link,{to:"locations"},v.title)),_react2.default.createElement('td',null,_react2.default.createElement(_rubix.Button,{bsStyle:'danger'},' X '))));});return _react2.default.createElement(_rubix.PanelContainer,{noOverflow:true},_react2.default.createElement(_rubix.Panel,null,_react2.default.createElement(_rubix.PanelHeader,{className:'bg-green fg-white'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement('h3',null,'Locations'))))),_react2.default.createElement(_rubix.PanelBody,null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_rubix.Table,{ref:function ref(c){return _this3.locationTable=c;},className:'display',cellSpacing:'0',width:'100%'},_react2.default.createElement('thead',null,_react2.default.createElement('tr',null,_react2.default.createElement('th',null,'State'),_react2.default.createElement('th',null,'Country'),_react2.default.createElement('th',null))),_react2.default.createElement('tfoot',null,_react2.default.createElement('tr',null,_react2.default.createElement('th',null,'State'),_react2.default.createElement('th',null,'Country'),_react2.default.createElement('th',null))),_react2.default.createElement('tbody',null,rows))))))));};return LocationsList;}(_react2.default.Component);var Locations=(0,_reactRouter.withRouter)(_class=function(_React$Component2){(0,_inherits3.default)(Locations,_React$Component2);function Locations(){(0,_classCallCheck3.default)(this,Locations);return(0,_possibleConstructorReturn3.default)(this,_React$Component2.apply(this,arguments));}Locations.prototype.render=function render(){return _react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{sm:12},_react2.default.createElement(LocationsList,this.props)));};return Locations;}(_react2.default.Component))||_class;exports.default=Locations;;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(LocationsList,'LocationsList','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/routes/Locations/index.js');__REACT_HOT_LOADER__.register(Locations,'Locations','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/routes/Locations/index.js');})();;
+
+/***/ },
+/* 590 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var arrayEach = __webpack_require__(591),
+	    baseEach = __webpack_require__(592),
+	    baseIteratee = __webpack_require__(613),
+	    isArray = __webpack_require__(606);
 	
 	/**
 	 * Iterates over elements of `collection` and invokes `iteratee` for each element.
@@ -47938,7 +47956,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 588 */
+/* 591 */
 /***/ function(module, exports) {
 
 	/**
@@ -47966,11 +47984,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 589 */
+/* 592 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseForOwn = __webpack_require__(590),
-	    createBaseEach = __webpack_require__(609);
+	var baseForOwn = __webpack_require__(593),
+	    createBaseEach = __webpack_require__(612);
 	
 	/**
 	 * The base implementation of `_.forEach` without support for iteratee shorthands.
@@ -47986,11 +48004,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 590 */
+/* 593 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseFor = __webpack_require__(591),
-	    keys = __webpack_require__(593);
+	var baseFor = __webpack_require__(594),
+	    keys = __webpack_require__(596);
 	
 	/**
 	 * The base implementation of `_.forOwn` without support for iteratee shorthands.
@@ -48008,10 +48026,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 591 */
+/* 594 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var createBaseFor = __webpack_require__(592);
+	var createBaseFor = __webpack_require__(595);
 	
 	/**
 	 * The base implementation of `baseForOwn` which iterates over `object`
@@ -48030,7 +48048,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 592 */
+/* 595 */
 /***/ function(module, exports) {
 
 	/**
@@ -48061,12 +48079,12 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 593 */
+/* 596 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var arrayLikeKeys = __webpack_require__(594),
-	    baseKeys = __webpack_require__(605),
-	    isArrayLike = __webpack_require__(598);
+	var arrayLikeKeys = __webpack_require__(597),
+	    baseKeys = __webpack_require__(608),
+	    isArrayLike = __webpack_require__(601);
 	
 	/**
 	 * Creates an array of the own enumerable property names of `object`.
@@ -48104,13 +48122,13 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 594 */
+/* 597 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseTimes = __webpack_require__(595),
-	    isArguments = __webpack_require__(596),
-	    isArray = __webpack_require__(603),
-	    isIndex = __webpack_require__(604);
+	var baseTimes = __webpack_require__(598),
+	    isArguments = __webpack_require__(599),
+	    isArray = __webpack_require__(606),
+	    isIndex = __webpack_require__(607);
 	
 	/** Used for built-in method references. */
 	var objectProto = Object.prototype;
@@ -48149,7 +48167,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 595 */
+/* 598 */
 /***/ function(module, exports) {
 
 	/**
@@ -48175,10 +48193,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 596 */
+/* 599 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isArrayLikeObject = __webpack_require__(597);
+	var isArrayLikeObject = __webpack_require__(600);
 	
 	/** `Object#toString` result references. */
 	var argsTag = '[object Arguments]';
@@ -48227,11 +48245,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 597 */
+/* 600 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isArrayLike = __webpack_require__(598),
-	    isObjectLike = __webpack_require__(602);
+	var isArrayLike = __webpack_require__(601),
+	    isObjectLike = __webpack_require__(605);
 	
 	/**
 	 * This method is like `_.isArrayLike` except that it also checks if `value`
@@ -48266,11 +48284,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 598 */
+/* 601 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isFunction = __webpack_require__(599),
-	    isLength = __webpack_require__(601);
+	var isFunction = __webpack_require__(602),
+	    isLength = __webpack_require__(604);
 	
 	/**
 	 * Checks if `value` is array-like. A value is considered array-like if it's
@@ -48305,10 +48323,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 599 */
+/* 602 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isObject = __webpack_require__(600);
+	var isObject = __webpack_require__(603);
 	
 	/** `Object#toString` result references. */
 	var funcTag = '[object Function]',
@@ -48352,7 +48370,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 600 */
+/* 603 */
 /***/ function(module, exports) {
 
 	/**
@@ -48389,7 +48407,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 601 */
+/* 604 */
 /***/ function(module, exports) {
 
 	/** Used as references for various `Number` constants. */
@@ -48430,7 +48448,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 602 */
+/* 605 */
 /***/ function(module, exports) {
 
 	/**
@@ -48465,7 +48483,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 603 */
+/* 606 */
 /***/ function(module, exports) {
 
 	/**
@@ -48497,7 +48515,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 604 */
+/* 607 */
 /***/ function(module, exports) {
 
 	/** Used as references for various `Number` constants. */
@@ -48525,11 +48543,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 605 */
+/* 608 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isPrototype = __webpack_require__(606),
-	    nativeKeys = __webpack_require__(607);
+	var isPrototype = __webpack_require__(609),
+	    nativeKeys = __webpack_require__(610);
 	
 	/** Used for built-in method references. */
 	var objectProto = Object.prototype;
@@ -48561,7 +48579,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 606 */
+/* 609 */
 /***/ function(module, exports) {
 
 	/** Used for built-in method references. */
@@ -48585,10 +48603,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 607 */
+/* 610 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var overArg = __webpack_require__(608);
+	var overArg = __webpack_require__(611);
 	
 	/* Built-in method references for those with the same name as other `lodash` methods. */
 	var nativeKeys = overArg(Object.keys, Object);
@@ -48597,7 +48615,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 608 */
+/* 611 */
 /***/ function(module, exports) {
 
 	/**
@@ -48618,10 +48636,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 609 */
+/* 612 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isArrayLike = __webpack_require__(598);
+	var isArrayLike = __webpack_require__(601);
 	
 	/**
 	 * Creates a `baseEach` or `baseEachRight` function.
@@ -48656,14 +48674,14 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 610 */
+/* 613 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseMatches = __webpack_require__(611),
-	    baseMatchesProperty = __webpack_require__(679),
-	    identity = __webpack_require__(693),
-	    isArray = __webpack_require__(603),
-	    property = __webpack_require__(694);
+	var baseMatches = __webpack_require__(614),
+	    baseMatchesProperty = __webpack_require__(682),
+	    identity = __webpack_require__(696),
+	    isArray = __webpack_require__(606),
+	    property = __webpack_require__(697);
 	
 	/**
 	 * The base implementation of `_.iteratee`.
@@ -48693,12 +48711,12 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 611 */
+/* 614 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseIsMatch = __webpack_require__(612),
-	    getMatchData = __webpack_require__(676),
-	    matchesStrictComparable = __webpack_require__(678);
+	var baseIsMatch = __webpack_require__(615),
+	    getMatchData = __webpack_require__(679),
+	    matchesStrictComparable = __webpack_require__(681);
 	
 	/**
 	 * The base implementation of `_.matches` which doesn't clone `source`.
@@ -48721,11 +48739,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 612 */
+/* 615 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Stack = __webpack_require__(613),
-	    baseIsEqual = __webpack_require__(652);
+	var Stack = __webpack_require__(616),
+	    baseIsEqual = __webpack_require__(655);
 	
 	/** Used to compose bitmasks for comparison styles. */
 	var UNORDERED_COMPARE_FLAG = 1,
@@ -48789,15 +48807,15 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 613 */
+/* 616 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var ListCache = __webpack_require__(614),
-	    stackClear = __webpack_require__(622),
-	    stackDelete = __webpack_require__(623),
-	    stackGet = __webpack_require__(624),
-	    stackHas = __webpack_require__(625),
-	    stackSet = __webpack_require__(626);
+	var ListCache = __webpack_require__(617),
+	    stackClear = __webpack_require__(625),
+	    stackDelete = __webpack_require__(626),
+	    stackGet = __webpack_require__(627),
+	    stackHas = __webpack_require__(628),
+	    stackSet = __webpack_require__(629);
 	
 	/**
 	 * Creates a stack cache object to store key-value pairs.
@@ -48821,14 +48839,14 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 614 */
+/* 617 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var listCacheClear = __webpack_require__(615),
-	    listCacheDelete = __webpack_require__(616),
-	    listCacheGet = __webpack_require__(619),
-	    listCacheHas = __webpack_require__(620),
-	    listCacheSet = __webpack_require__(621);
+	var listCacheClear = __webpack_require__(618),
+	    listCacheDelete = __webpack_require__(619),
+	    listCacheGet = __webpack_require__(622),
+	    listCacheHas = __webpack_require__(623),
+	    listCacheSet = __webpack_require__(624);
 	
 	/**
 	 * Creates an list cache object.
@@ -48859,7 +48877,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 615 */
+/* 618 */
 /***/ function(module, exports) {
 
 	/**
@@ -48877,10 +48895,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 616 */
+/* 619 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var assocIndexOf = __webpack_require__(617);
+	var assocIndexOf = __webpack_require__(620);
 	
 	/** Used for built-in method references. */
 	var arrayProto = Array.prototype;
@@ -48917,10 +48935,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 617 */
+/* 620 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var eq = __webpack_require__(618);
+	var eq = __webpack_require__(621);
 	
 	/**
 	 * Gets the index at which the `key` is found in `array` of key-value pairs.
@@ -48944,7 +48962,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 618 */
+/* 621 */
 /***/ function(module, exports) {
 
 	/**
@@ -48987,10 +49005,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 619 */
+/* 622 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var assocIndexOf = __webpack_require__(617);
+	var assocIndexOf = __webpack_require__(620);
 	
 	/**
 	 * Gets the list cache value for `key`.
@@ -49012,10 +49030,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 620 */
+/* 623 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var assocIndexOf = __webpack_require__(617);
+	var assocIndexOf = __webpack_require__(620);
 	
 	/**
 	 * Checks if a list cache value for `key` exists.
@@ -49034,10 +49052,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 621 */
+/* 624 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var assocIndexOf = __webpack_require__(617);
+	var assocIndexOf = __webpack_require__(620);
 	
 	/**
 	 * Sets the list cache `key` to `value`.
@@ -49065,10 +49083,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 622 */
+/* 625 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var ListCache = __webpack_require__(614);
+	var ListCache = __webpack_require__(617);
 	
 	/**
 	 * Removes all key-value entries from the stack.
@@ -49085,7 +49103,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 623 */
+/* 626 */
 /***/ function(module, exports) {
 
 	/**
@@ -49105,7 +49123,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 624 */
+/* 627 */
 /***/ function(module, exports) {
 
 	/**
@@ -49125,7 +49143,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 625 */
+/* 628 */
 /***/ function(module, exports) {
 
 	/**
@@ -49145,12 +49163,12 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 626 */
+/* 629 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var ListCache = __webpack_require__(614),
-	    Map = __webpack_require__(627),
-	    MapCache = __webpack_require__(637);
+	var ListCache = __webpack_require__(617),
+	    Map = __webpack_require__(630),
+	    MapCache = __webpack_require__(640);
 	
 	/** Used as the size to enable large array optimizations. */
 	var LARGE_ARRAY_SIZE = 200;
@@ -49183,11 +49201,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 627 */
+/* 630 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getNative = __webpack_require__(628),
-	    root = __webpack_require__(633);
+	var getNative = __webpack_require__(631),
+	    root = __webpack_require__(636);
 	
 	/* Built-in method references that are verified to be native. */
 	var Map = getNative(root, 'Map');
@@ -49196,11 +49214,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 628 */
+/* 631 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseIsNative = __webpack_require__(629),
-	    getValue = __webpack_require__(636);
+	var baseIsNative = __webpack_require__(632),
+	    getValue = __webpack_require__(639);
 	
 	/**
 	 * Gets the native function at `key` of `object`.
@@ -49219,14 +49237,14 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 629 */
+/* 632 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isFunction = __webpack_require__(599),
-	    isHostObject = __webpack_require__(630),
-	    isMasked = __webpack_require__(631),
-	    isObject = __webpack_require__(600),
-	    toSource = __webpack_require__(635);
+	var isFunction = __webpack_require__(602),
+	    isHostObject = __webpack_require__(633),
+	    isMasked = __webpack_require__(634),
+	    isObject = __webpack_require__(603),
+	    toSource = __webpack_require__(638);
 	
 	/**
 	 * Used to match `RegExp`
@@ -49273,7 +49291,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 630 */
+/* 633 */
 /***/ function(module, exports) {
 
 	/**
@@ -49299,10 +49317,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 631 */
+/* 634 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var coreJsData = __webpack_require__(632);
+	var coreJsData = __webpack_require__(635);
 	
 	/** Used to detect methods masquerading as native. */
 	var maskSrcKey = (function() {
@@ -49325,10 +49343,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 632 */
+/* 635 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var root = __webpack_require__(633);
+	var root = __webpack_require__(636);
 	
 	/** Used to detect overreaching core-js shims. */
 	var coreJsData = root['__core-js_shared__'];
@@ -49337,10 +49355,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 633 */
+/* 636 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var freeGlobal = __webpack_require__(634);
+	var freeGlobal = __webpack_require__(637);
 	
 	/** Detect free variable `self`. */
 	var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
@@ -49352,7 +49370,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 634 */
+/* 637 */
 /***/ function(module, exports) {
 
 	/** Detect free variable `global` from Node.js. */
@@ -49362,7 +49380,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 635 */
+/* 638 */
 /***/ function(module, exports) {
 
 	/** Used for built-in method references. */
@@ -49394,7 +49412,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 636 */
+/* 639 */
 /***/ function(module, exports) {
 
 	/**
@@ -49413,14 +49431,14 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 637 */
+/* 640 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var mapCacheClear = __webpack_require__(638),
-	    mapCacheDelete = __webpack_require__(646),
-	    mapCacheGet = __webpack_require__(649),
-	    mapCacheHas = __webpack_require__(650),
-	    mapCacheSet = __webpack_require__(651);
+	var mapCacheClear = __webpack_require__(641),
+	    mapCacheDelete = __webpack_require__(649),
+	    mapCacheGet = __webpack_require__(652),
+	    mapCacheHas = __webpack_require__(653),
+	    mapCacheSet = __webpack_require__(654);
 	
 	/**
 	 * Creates a map cache object to store key-value pairs.
@@ -49451,12 +49469,12 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 638 */
+/* 641 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Hash = __webpack_require__(639),
-	    ListCache = __webpack_require__(614),
-	    Map = __webpack_require__(627);
+	var Hash = __webpack_require__(642),
+	    ListCache = __webpack_require__(617),
+	    Map = __webpack_require__(630);
 	
 	/**
 	 * Removes all key-value entries from the map.
@@ -49477,14 +49495,14 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 639 */
+/* 642 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var hashClear = __webpack_require__(640),
-	    hashDelete = __webpack_require__(642),
-	    hashGet = __webpack_require__(643),
-	    hashHas = __webpack_require__(644),
-	    hashSet = __webpack_require__(645);
+	var hashClear = __webpack_require__(643),
+	    hashDelete = __webpack_require__(645),
+	    hashGet = __webpack_require__(646),
+	    hashHas = __webpack_require__(647),
+	    hashSet = __webpack_require__(648);
 	
 	/**
 	 * Creates a hash object.
@@ -49515,10 +49533,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 640 */
+/* 643 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var nativeCreate = __webpack_require__(641);
+	var nativeCreate = __webpack_require__(644);
 	
 	/**
 	 * Removes all key-value entries from the hash.
@@ -49535,10 +49553,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 641 */
+/* 644 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getNative = __webpack_require__(628);
+	var getNative = __webpack_require__(631);
 	
 	/* Built-in method references that are verified to be native. */
 	var nativeCreate = getNative(Object, 'create');
@@ -49547,7 +49565,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 642 */
+/* 645 */
 /***/ function(module, exports) {
 
 	/**
@@ -49568,10 +49586,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 643 */
+/* 646 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var nativeCreate = __webpack_require__(641);
+	var nativeCreate = __webpack_require__(644);
 	
 	/** Used to stand-in for `undefined` hash values. */
 	var HASH_UNDEFINED = '__lodash_hash_undefined__';
@@ -49604,10 +49622,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 644 */
+/* 647 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var nativeCreate = __webpack_require__(641);
+	var nativeCreate = __webpack_require__(644);
 	
 	/** Used for built-in method references. */
 	var objectProto = Object.prototype;
@@ -49633,10 +49651,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 645 */
+/* 648 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var nativeCreate = __webpack_require__(641);
+	var nativeCreate = __webpack_require__(644);
 	
 	/** Used to stand-in for `undefined` hash values. */
 	var HASH_UNDEFINED = '__lodash_hash_undefined__';
@@ -49661,10 +49679,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 646 */
+/* 649 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getMapData = __webpack_require__(647);
+	var getMapData = __webpack_require__(650);
 	
 	/**
 	 * Removes `key` and its value from the map.
@@ -49683,10 +49701,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 647 */
+/* 650 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isKeyable = __webpack_require__(648);
+	var isKeyable = __webpack_require__(651);
 	
 	/**
 	 * Gets the data for `map`.
@@ -49707,7 +49725,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 648 */
+/* 651 */
 /***/ function(module, exports) {
 
 	/**
@@ -49728,10 +49746,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 649 */
+/* 652 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getMapData = __webpack_require__(647);
+	var getMapData = __webpack_require__(650);
 	
 	/**
 	 * Gets the map value for `key`.
@@ -49750,10 +49768,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 650 */
+/* 653 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getMapData = __webpack_require__(647);
+	var getMapData = __webpack_require__(650);
 	
 	/**
 	 * Checks if a map value for `key` exists.
@@ -49772,10 +49790,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 651 */
+/* 654 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getMapData = __webpack_require__(647);
+	var getMapData = __webpack_require__(650);
 	
 	/**
 	 * Sets the map `key` to `value`.
@@ -49796,12 +49814,12 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 652 */
+/* 655 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseIsEqualDeep = __webpack_require__(653),
-	    isObject = __webpack_require__(600),
-	    isObjectLike = __webpack_require__(602);
+	var baseIsEqualDeep = __webpack_require__(656),
+	    isObject = __webpack_require__(603),
+	    isObjectLike = __webpack_require__(605);
 	
 	/**
 	 * The base implementation of `_.isEqual` which supports partial comparisons
@@ -49832,17 +49850,17 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 653 */
+/* 656 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Stack = __webpack_require__(613),
-	    equalArrays = __webpack_require__(654),
-	    equalByTag = __webpack_require__(659),
-	    equalObjects = __webpack_require__(664),
-	    getTag = __webpack_require__(665),
-	    isArray = __webpack_require__(603),
-	    isHostObject = __webpack_require__(630),
-	    isTypedArray = __webpack_require__(671);
+	var Stack = __webpack_require__(616),
+	    equalArrays = __webpack_require__(657),
+	    equalByTag = __webpack_require__(662),
+	    equalObjects = __webpack_require__(667),
+	    getTag = __webpack_require__(668),
+	    isArray = __webpack_require__(606),
+	    isHostObject = __webpack_require__(633),
+	    isTypedArray = __webpack_require__(674);
 	
 	/** Used to compose bitmasks for comparison styles. */
 	var PARTIAL_COMPARE_FLAG = 2;
@@ -49920,11 +49938,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 654 */
+/* 657 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var SetCache = __webpack_require__(655),
-	    arraySome = __webpack_require__(658);
+	var SetCache = __webpack_require__(658),
+	    arraySome = __webpack_require__(661);
 	
 	/** Used to compose bitmasks for comparison styles. */
 	var UNORDERED_COMPARE_FLAG = 1,
@@ -50009,12 +50027,12 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 655 */
+/* 658 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var MapCache = __webpack_require__(637),
-	    setCacheAdd = __webpack_require__(656),
-	    setCacheHas = __webpack_require__(657);
+	var MapCache = __webpack_require__(640),
+	    setCacheAdd = __webpack_require__(659),
+	    setCacheHas = __webpack_require__(660);
 	
 	/**
 	 *
@@ -50042,7 +50060,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 656 */
+/* 659 */
 /***/ function(module, exports) {
 
 	/** Used to stand-in for `undefined` hash values. */
@@ -50067,7 +50085,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 657 */
+/* 660 */
 /***/ function(module, exports) {
 
 	/**
@@ -50087,7 +50105,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 658 */
+/* 661 */
 /***/ function(module, exports) {
 
 	/**
@@ -50116,15 +50134,15 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 659 */
+/* 662 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Symbol = __webpack_require__(660),
-	    Uint8Array = __webpack_require__(661),
-	    eq = __webpack_require__(618),
-	    equalArrays = __webpack_require__(654),
-	    mapToArray = __webpack_require__(662),
-	    setToArray = __webpack_require__(663);
+	var Symbol = __webpack_require__(663),
+	    Uint8Array = __webpack_require__(664),
+	    eq = __webpack_require__(621),
+	    equalArrays = __webpack_require__(657),
+	    mapToArray = __webpack_require__(665),
+	    setToArray = __webpack_require__(666);
 	
 	/** Used to compose bitmasks for comparison styles. */
 	var UNORDERED_COMPARE_FLAG = 1,
@@ -50235,10 +50253,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 660 */
+/* 663 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var root = __webpack_require__(633);
+	var root = __webpack_require__(636);
 	
 	/** Built-in value references. */
 	var Symbol = root.Symbol;
@@ -50247,10 +50265,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 661 */
+/* 664 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var root = __webpack_require__(633);
+	var root = __webpack_require__(636);
 	
 	/** Built-in value references. */
 	var Uint8Array = root.Uint8Array;
@@ -50259,7 +50277,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 662 */
+/* 665 */
 /***/ function(module, exports) {
 
 	/**
@@ -50283,7 +50301,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 663 */
+/* 666 */
 /***/ function(module, exports) {
 
 	/**
@@ -50307,10 +50325,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 664 */
+/* 667 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var keys = __webpack_require__(593);
+	var keys = __webpack_require__(596);
 	
 	/** Used to compose bitmasks for comparison styles. */
 	var PARTIAL_COMPARE_FLAG = 2;
@@ -50403,16 +50421,16 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 665 */
+/* 668 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var DataView = __webpack_require__(666),
-	    Map = __webpack_require__(627),
-	    Promise = __webpack_require__(667),
-	    Set = __webpack_require__(668),
-	    WeakMap = __webpack_require__(669),
-	    baseGetTag = __webpack_require__(670),
-	    toSource = __webpack_require__(635);
+	var DataView = __webpack_require__(669),
+	    Map = __webpack_require__(630),
+	    Promise = __webpack_require__(670),
+	    Set = __webpack_require__(671),
+	    WeakMap = __webpack_require__(672),
+	    baseGetTag = __webpack_require__(673),
+	    toSource = __webpack_require__(638);
 	
 	/** `Object#toString` result references. */
 	var mapTag = '[object Map]',
@@ -50478,11 +50496,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 666 */
+/* 669 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getNative = __webpack_require__(628),
-	    root = __webpack_require__(633);
+	var getNative = __webpack_require__(631),
+	    root = __webpack_require__(636);
 	
 	/* Built-in method references that are verified to be native. */
 	var DataView = getNative(root, 'DataView');
@@ -50491,11 +50509,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 667 */
+/* 670 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getNative = __webpack_require__(628),
-	    root = __webpack_require__(633);
+	var getNative = __webpack_require__(631),
+	    root = __webpack_require__(636);
 	
 	/* Built-in method references that are verified to be native. */
 	var Promise = getNative(root, 'Promise');
@@ -50504,11 +50522,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 668 */
+/* 671 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getNative = __webpack_require__(628),
-	    root = __webpack_require__(633);
+	var getNative = __webpack_require__(631),
+	    root = __webpack_require__(636);
 	
 	/* Built-in method references that are verified to be native. */
 	var Set = getNative(root, 'Set');
@@ -50517,11 +50535,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 669 */
+/* 672 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getNative = __webpack_require__(628),
-	    root = __webpack_require__(633);
+	var getNative = __webpack_require__(631),
+	    root = __webpack_require__(636);
 	
 	/* Built-in method references that are verified to be native. */
 	var WeakMap = getNative(root, 'WeakMap');
@@ -50530,7 +50548,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 670 */
+/* 673 */
 /***/ function(module, exports) {
 
 	/** Used for built-in method references. */
@@ -50558,12 +50576,12 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 671 */
+/* 674 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseIsTypedArray = __webpack_require__(672),
-	    baseUnary = __webpack_require__(673),
-	    nodeUtil = __webpack_require__(674);
+	var baseIsTypedArray = __webpack_require__(675),
+	    baseUnary = __webpack_require__(676),
+	    nodeUtil = __webpack_require__(677);
 	
 	/* Node.js helper references. */
 	var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
@@ -50591,11 +50609,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 672 */
+/* 675 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isLength = __webpack_require__(601),
-	    isObjectLike = __webpack_require__(602);
+	var isLength = __webpack_require__(604),
+	    isObjectLike = __webpack_require__(605);
 	
 	/** `Object#toString` result references. */
 	var argsTag = '[object Arguments]',
@@ -50666,7 +50684,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 673 */
+/* 676 */
 /***/ function(module, exports) {
 
 	/**
@@ -50686,10 +50704,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 674 */
+/* 677 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(634);
+	/* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(637);
 	
 	/** Detect free variable `exports`. */
 	var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
@@ -50712,10 +50730,10 @@ require('source-map-support').install({environment: 'node'});
 	
 	module.exports = nodeUtil;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(675)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(678)(module)))
 
 /***/ },
-/* 675 */
+/* 678 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -50731,11 +50749,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 676 */
+/* 679 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isStrictComparable = __webpack_require__(677),
-	    keys = __webpack_require__(593);
+	var isStrictComparable = __webpack_require__(680),
+	    keys = __webpack_require__(596);
 	
 	/**
 	 * Gets the property names, values, and compare flags of `object`.
@@ -50761,10 +50779,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 677 */
+/* 680 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isObject = __webpack_require__(600);
+	var isObject = __webpack_require__(603);
 	
 	/**
 	 * Checks if `value` is suitable for strict equality comparisons, i.e. `===`.
@@ -50782,7 +50800,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 678 */
+/* 681 */
 /***/ function(module, exports) {
 
 	/**
@@ -50808,16 +50826,16 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 679 */
+/* 682 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseIsEqual = __webpack_require__(652),
-	    get = __webpack_require__(680),
-	    hasIn = __webpack_require__(690),
-	    isKey = __webpack_require__(688),
-	    isStrictComparable = __webpack_require__(677),
-	    matchesStrictComparable = __webpack_require__(678),
-	    toKey = __webpack_require__(689);
+	var baseIsEqual = __webpack_require__(655),
+	    get = __webpack_require__(683),
+	    hasIn = __webpack_require__(693),
+	    isKey = __webpack_require__(691),
+	    isStrictComparable = __webpack_require__(680),
+	    matchesStrictComparable = __webpack_require__(681),
+	    toKey = __webpack_require__(692);
 	
 	/** Used to compose bitmasks for comparison styles. */
 	var UNORDERED_COMPARE_FLAG = 1,
@@ -50847,10 +50865,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 680 */
+/* 683 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseGet = __webpack_require__(681);
+	var baseGet = __webpack_require__(684);
 	
 	/**
 	 * Gets the value at `path` of `object`. If the resolved value is
@@ -50886,12 +50904,12 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 681 */
+/* 684 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var castPath = __webpack_require__(682),
-	    isKey = __webpack_require__(688),
-	    toKey = __webpack_require__(689);
+	var castPath = __webpack_require__(685),
+	    isKey = __webpack_require__(691),
+	    toKey = __webpack_require__(692);
 	
 	/**
 	 * The base implementation of `_.get` without support for default values.
@@ -50917,11 +50935,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 682 */
+/* 685 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isArray = __webpack_require__(603),
-	    stringToPath = __webpack_require__(683);
+	var isArray = __webpack_require__(606),
+	    stringToPath = __webpack_require__(686);
 	
 	/**
 	 * Casts `value` to a path array if it's not one.
@@ -50938,11 +50956,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 683 */
+/* 686 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var memoize = __webpack_require__(684),
-	    toString = __webpack_require__(685);
+	var memoize = __webpack_require__(687),
+	    toString = __webpack_require__(688);
 	
 	/** Used to match property names within property paths. */
 	var reLeadingDot = /^\./,
@@ -50975,10 +50993,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 684 */
+/* 687 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var MapCache = __webpack_require__(637);
+	var MapCache = __webpack_require__(640);
 	
 	/** Used as the `TypeError` message for "Functions" methods. */
 	var FUNC_ERROR_TEXT = 'Expected a function';
@@ -51054,10 +51072,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 685 */
+/* 688 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseToString = __webpack_require__(686);
+	var baseToString = __webpack_require__(689);
 	
 	/**
 	 * Converts `value` to a string. An empty string is returned for `null`
@@ -51088,11 +51106,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 686 */
+/* 689 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Symbol = __webpack_require__(660),
-	    isSymbol = __webpack_require__(687);
+	var Symbol = __webpack_require__(663),
+	    isSymbol = __webpack_require__(690);
 	
 	/** Used as references for various `Number` constants. */
 	var INFINITY = 1 / 0;
@@ -51125,10 +51143,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 687 */
+/* 690 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isObjectLike = __webpack_require__(602);
+	var isObjectLike = __webpack_require__(605);
 	
 	/** `Object#toString` result references. */
 	var symbolTag = '[object Symbol]';
@@ -51169,11 +51187,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 688 */
+/* 691 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isArray = __webpack_require__(603),
-	    isSymbol = __webpack_require__(687);
+	var isArray = __webpack_require__(606),
+	    isSymbol = __webpack_require__(690);
 	
 	/** Used to match property names within property paths. */
 	var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
@@ -51204,10 +51222,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 689 */
+/* 692 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isSymbol = __webpack_require__(687);
+	var isSymbol = __webpack_require__(690);
 	
 	/** Used as references for various `Number` constants. */
 	var INFINITY = 1 / 0;
@@ -51231,11 +51249,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 690 */
+/* 693 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseHasIn = __webpack_require__(691),
-	    hasPath = __webpack_require__(692);
+	var baseHasIn = __webpack_require__(694),
+	    hasPath = __webpack_require__(695);
 	
 	/**
 	 * Checks if `path` is a direct or inherited property of `object`.
@@ -51271,7 +51289,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 691 */
+/* 694 */
 /***/ function(module, exports) {
 
 	/**
@@ -51290,16 +51308,16 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 692 */
+/* 695 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var castPath = __webpack_require__(682),
-	    isArguments = __webpack_require__(596),
-	    isArray = __webpack_require__(603),
-	    isIndex = __webpack_require__(604),
-	    isKey = __webpack_require__(688),
-	    isLength = __webpack_require__(601),
-	    toKey = __webpack_require__(689);
+	var castPath = __webpack_require__(685),
+	    isArguments = __webpack_require__(599),
+	    isArray = __webpack_require__(606),
+	    isIndex = __webpack_require__(607),
+	    isKey = __webpack_require__(691),
+	    isLength = __webpack_require__(604),
+	    toKey = __webpack_require__(692);
 	
 	/**
 	 * Checks if `path` exists on `object`.
@@ -51336,7 +51354,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 693 */
+/* 696 */
 /***/ function(module, exports) {
 
 	/**
@@ -51363,13 +51381,13 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 694 */
+/* 697 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseProperty = __webpack_require__(695),
-	    basePropertyDeep = __webpack_require__(696),
-	    isKey = __webpack_require__(688),
-	    toKey = __webpack_require__(689);
+	var baseProperty = __webpack_require__(698),
+	    basePropertyDeep = __webpack_require__(699),
+	    isKey = __webpack_require__(691),
+	    toKey = __webpack_require__(692);
 	
 	/**
 	 * Creates a function that returns the value at `path` of a given object.
@@ -51401,7 +51419,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 695 */
+/* 698 */
 /***/ function(module, exports) {
 
 	/**
@@ -51421,10 +51439,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 696 */
+/* 699 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseGet = __webpack_require__(681);
+	var baseGet = __webpack_require__(684);
 	
 	/**
 	 * A specialized version of `baseProperty` which supports deep paths.
@@ -51443,11 +51461,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 697 */
+/* 700 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseRest = __webpack_require__(698),
-	    pullAll = __webpack_require__(700);
+	var baseRest = __webpack_require__(701),
+	    pullAll = __webpack_require__(703);
 	
 	/**
 	 * Removes all given values from `array` using
@@ -51478,10 +51496,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 698 */
+/* 701 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var apply = __webpack_require__(699);
+	var apply = __webpack_require__(702);
 	
 	/* Built-in method references for those with the same name as other `lodash` methods. */
 	var nativeMax = Math.max;
@@ -51519,7 +51537,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 699 */
+/* 702 */
 /***/ function(module, exports) {
 
 	/**
@@ -51546,10 +51564,10 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 700 */
+/* 703 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var basePullAll = __webpack_require__(701);
+	var basePullAll = __webpack_require__(704);
 	
 	/**
 	 * This method is like `_.pull` except that it accepts an array of values to remove.
@@ -51581,14 +51599,14 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 701 */
+/* 704 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var arrayMap = __webpack_require__(702),
-	    baseIndexOf = __webpack_require__(703),
-	    baseIndexOfWith = __webpack_require__(706),
-	    baseUnary = __webpack_require__(673),
-	    copyArray = __webpack_require__(707);
+	var arrayMap = __webpack_require__(705),
+	    baseIndexOf = __webpack_require__(706),
+	    baseIndexOfWith = __webpack_require__(709),
+	    baseUnary = __webpack_require__(676),
+	    copyArray = __webpack_require__(710);
 	
 	/** Used for built-in method references. */
 	var arrayProto = Array.prototype;
@@ -51638,7 +51656,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 702 */
+/* 705 */
 /***/ function(module, exports) {
 
 	/**
@@ -51665,11 +51683,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 703 */
+/* 706 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseFindIndex = __webpack_require__(704),
-	    baseIsNaN = __webpack_require__(705);
+	var baseFindIndex = __webpack_require__(707),
+	    baseIsNaN = __webpack_require__(708);
 	
 	/**
 	 * The base implementation of `_.indexOf` without `fromIndex` bounds checks.
@@ -51699,7 +51717,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 704 */
+/* 707 */
 /***/ function(module, exports) {
 
 	/**
@@ -51729,7 +51747,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 705 */
+/* 708 */
 /***/ function(module, exports) {
 
 	/**
@@ -51747,7 +51765,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 706 */
+/* 709 */
 /***/ function(module, exports) {
 
 	/**
@@ -51776,7 +51794,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 707 */
+/* 710 */
 /***/ function(module, exports) {
 
 	/**
@@ -51802,11 +51820,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 708 */
+/* 711 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseIteratee = __webpack_require__(610),
-	    basePullAt = __webpack_require__(709);
+	var baseIteratee = __webpack_require__(613),
+	    basePullAt = __webpack_require__(712);
 	
 	/**
 	 * Removes all elements from `array` that `predicate` returns truthy for
@@ -51862,15 +51880,15 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 709 */
+/* 712 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var castPath = __webpack_require__(682),
-	    isIndex = __webpack_require__(604),
-	    isKey = __webpack_require__(688),
-	    last = __webpack_require__(710),
-	    parent = __webpack_require__(711),
-	    toKey = __webpack_require__(689);
+	var castPath = __webpack_require__(685),
+	    isIndex = __webpack_require__(607),
+	    isKey = __webpack_require__(691),
+	    last = __webpack_require__(713),
+	    parent = __webpack_require__(714),
+	    toKey = __webpack_require__(692);
 	
 	/** Used for built-in method references. */
 	var arrayProto = Array.prototype;
@@ -51918,7 +51936,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 710 */
+/* 713 */
 /***/ function(module, exports) {
 
 	/**
@@ -51944,11 +51962,11 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 711 */
+/* 714 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseGet = __webpack_require__(681),
-	    baseSlice = __webpack_require__(712);
+	var baseGet = __webpack_require__(684),
+	    baseSlice = __webpack_require__(715);
 	
 	/**
 	 * Gets the parent value at `path` of `object`.
@@ -51966,7 +51984,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 712 */
+/* 715 */
 /***/ function(module, exports) {
 
 	/**
@@ -52003,67 +52021,55 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 713 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';exports.__esModule=true;var _extends2=__webpack_require__(249);var _extends3=_interopRequireDefault(_extends2);var _classCallCheck2=__webpack_require__(167);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(168);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(237);var _inherits3=_interopRequireDefault(_inherits2);var _formsyReact=__webpack_require__(584);var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _rubix=__webpack_require__(247);var _Input=__webpack_require__(585);var _Input2=_interopRequireDefault(_Input);var _Select=__webpack_require__(714);var _Select2=_interopRequireDefault(_Select);var _Dynamic=__webpack_require__(715);var _Dynamic2=_interopRequireDefault(_Dynamic);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var FormBuilder=function(_React$Component){(0,_inherits3.default)(FormBuilder,_React$Component);function FormBuilder(){(0,_classCallCheck3.default)(this,FormBuilder);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}FormBuilder.prototype.render=function render(){var _props=this.props;var schema=_props.schema;var onSubmit=_props.onSubmit;var isCancel=_props.isCancel;var submitText=_props.submitText;return _react2.default.createElement(_formsyReact.Form,{onSubmit:onSubmit},schema.map(function(field,k){switch(field.type){case'text':return _react2.default.createElement(_Input2.default,(0,_extends3.default)({key:k,type:field.type,id:field.id,label:field.title,controlId:field.id},field.props));case'select':return _react2.default.createElement(_Select2.default,(0,_extends3.default)({key:k,value:field.default,label:field.title,controlId:field.id},field.props));case"dynamic":return _react2.default.createElement(_Dynamic2.default,(0,_extends3.default)({id:field.id,key:k,controlId:field.id},field.props));break;}}),_react2.default.createElement('div',{style:{margin:"10px 0"}},isCancel&&_react2.default.createElement(_rubix.Button,{type:'submit',bsStyle:'lightgreen'},'cancel'),' ',_react2.default.createElement('button',{className:'btn-primary btn btn-default'},submitText)));};return FormBuilder;}(_react2.default.Component);FormBuilder.defaultProps={isCancel:true,submitText:"submit"};FormBuilder.propTypes={schema:_react2.default.PropTypes.array.isRequired,onSubmit:_react2.default.PropTypes.func.isRequired};var _default=FormBuilder;exports.default=_default;;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(FormBuilder,'FormBuilder','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/form/FormBuilder.js');__REACT_HOT_LOADER__.register(_default,'default','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/form/FormBuilder.js');})();;
-
-/***/ },
-/* 714 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';exports.__esModule=true;var _classCallCheck2=__webpack_require__(167);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(168);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(237);var _inherits3=_interopRequireDefault(_inherits2);var _rubix=__webpack_require__(247);var _formsyReact=__webpack_require__(584);var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Select=function(_React$Component){(0,_inherits3.default)(Select,_React$Component);function Select(){(0,_classCallCheck3.default)(this,Select);return(0,_possibleConstructorReturn3.default)(this,_React$Component.apply(this,arguments));}Select.prototype.render=function render(){var _this2=this;var _props=this.props;var label=_props.label;var controlId=_props.controlId;return _react2.default.createElement(_rubix.FormGroup,{controlId:controlId},_react2.default.createElement(_rubix.ControlLabel,null,label),_react2.default.createElement(_rubix.FormControl,{componentClass:'select',placeholder:'select',value:this.props.getValue(),onChange:function onChange(e){return _this2.props.setValue(e.target.value);}},this.props.options.map(function(option){return _react2.default.createElement('option',{key:option.id,value:option.id},option.title);})));};return Select;}(_react2.default.Component);var _default=(0,_formsyReact.HOC)(Select);exports.default=_default;;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(Select,'Select','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/form/Select.js');__REACT_HOT_LOADER__.register(_default,'default','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/form/Select.js');})();;
-
-/***/ },
-/* 715 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(167);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(168);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(237);var _inherits3=_interopRequireDefault(_inherits2);var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _Input=__webpack_require__(585);var _Input2=_interopRequireDefault(_Input);var _Select=__webpack_require__(714);var _Select2=_interopRequireDefault(_Select);var _rubix=__webpack_require__(247);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var Fields=function Fields(_ref){var fields=_ref.fields;var type=_ref.type;var title=_ref.title;var id=_ref.id;var onRemoveField=_ref.onRemoveField;function onRemove(e,pos){e.preventDefault();onRemoveField(pos);}return _react2.default.createElement('div',null,fields.map(function(field,k){var _React$createElement;var resultField=void 0;switch(type){case'text':resultField=_react2.default.createElement(_Input2.default,(_React$createElement={type:'text',controlId:id+'['+k+']',label:title},_React$createElement['type']='text',_React$createElement.name=id+'['+k+']',_React$createElement));break;case'select':resultField=_react2.default.createElement(_Select2.default,{controlId:id+'['+k+']',label:title,name:title+'['+k+']'});break;}return _react2.default.createElement(_rubix.Grid,{key:title+'['+k+']',style:{paddingTop:"15px"}},_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.BPanel,null,_react2.default.createElement(_rubix.Col,{md:10},resultField),_react2.default.createElement(_rubix.Col,{md:2,style:{paddingTop:"25px"}},_react2.default.createElement(_rubix.Button,{href:'#',bsStyle:'danger',onClick:function onClick(e){return onRemove(e,k);}},'X')))));}));};var Dynamic=function(_Component){(0,_inherits3.default)(Dynamic,_Component);function Dynamic(property,state){(0,_classCallCheck3.default)(this,Dynamic);var _this=(0,_possibleConstructorReturn3.default)(this,_Component.call(this,property));_this.state={fields:[]};return _this;}Dynamic.prototype.appendField=function appendField(){this.setState({fields:this.state.fields.concat(this.props.title+'-'+this.state.fields.length)});};Dynamic.prototype.removeField=function removeField(pos){var fields=this.state.fields;this.setState({fields:fields.slice(0,pos).concat(fields.slice(pos+1))});};Dynamic.prototype.render=function render(){var _this2=this;var _props=this.props;var type=_props.type;var title=_props.title;var id=_props.id;var fields=this.state.fields;return _react2.default.createElement('div',null,_react2.default.createElement('div',{className:'clearfix'},_react2.default.createElement(_rubix.Button,{bsClass:'pull-right btn-primary btn-default btn',type:'button',onClick:function onClick(){return _this2.appendField();}},'Add ',title,' ')),_react2.default.createElement(Fields,{fields:fields,id:id,type:type,title:title,onRemoveField:function onRemoveField(pos){return _this2.removeField(pos);}}));};return Dynamic;}(_react.Component);exports.default=Dynamic;;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(Fields,'Fields','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/form/Dynamic.js');__REACT_HOT_LOADER__.register(Dynamic,'Dynamic','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/form/Dynamic.js');})();;
-
-/***/ },
 /* 716 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;exports.push=push;exports.load=load;var _data=__webpack_require__(717);var _translation=__webpack_require__(719);var _q=__webpack_require__(718);var _q2=_interopRequireDefault(_q);var _lodash=__webpack_require__(720);var _lodash2=_interopRequireDefault(_lodash);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function push(areas){var Ids=[];var promises=[];var deferAreas=_q2.default.defer();console.log('Pushing areas',areas);_lodash2.default.forEach(areas,function(title,k){var deferred=_q2.default.defer();var areaId=(0,_data.pushData)('areas',{title:title});(0,_translation.addTranslation)('areas/'+areaId,{title:title});Ids.push({areaId:{title:title}});deferred.resolve(areaId);promises.push(deferred.promise);});console.log(Ids);_q2.default.all(promises).then(function(){deferAreas.resolve(Ids);}).catch(function(e){return deferAreas.reject();});return deferAreas.promise;}function load(areasIds){var promises=[];var areas=[];var defered=_q2.default.defer();_lodash2.default.forEach(areasIds,function(areaId,k){var defer=_q2.default.defer();(0,_data.getData)('areas/'+areaId).then(function(area){defer.resolve(area);areas.push(area);}).catch(function(e){return defer.reject();});promises.push(defer.promise);});_q2.default.all(promises).then(function(){return defered.resolve(areas);}).catch(function(e){return defered.reject();});return defered.promise;};(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(push,'push','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/areas.js');__REACT_HOT_LOADER__.register(load,'load','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/areas.js');})();;
+	'use strict';exports.__esModule=true;exports.default=undefined;var _classCallCheck2=__webpack_require__(167);var _classCallCheck3=_interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2=__webpack_require__(168);var _possibleConstructorReturn3=_interopRequireDefault(_possibleConstructorReturn2);var _inherits2=__webpack_require__(237);var _inherits3=_interopRequireDefault(_inherits2);var _class;var _react=__webpack_require__(6);var _react2=_interopRequireDefault(_react);var _foreach=__webpack_require__(590);var _foreach2=_interopRequireDefault(_foreach);var _pull=__webpack_require__(700);var _pull2=_interopRequireDefault(_pull);var _remove=__webpack_require__(711);var _remove2=_interopRequireDefault(_remove);var _reactRouter=__webpack_require__(246);var _FormBuilder=__webpack_require__(585);var _FormBuilder2=_interopRequireDefault(_FormBuilder);var _areas=__webpack_require__(717);var _locations=__webpack_require__(722);var _locationAreas=__webpack_require__(723);var _rubix=__webpack_require__(247);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var LocationForm=function(_React$Component){(0,_inherits3.default)(LocationForm,_React$Component);function LocationForm(props,state){(0,_classCallCheck3.default)(this,LocationForm);var _this=(0,_possibleConstructorReturn3.default)(this,_React$Component.call(this,props,state));_this.state={edit:_this.props.params.id!=='undefined'};return _this;}LocationForm.prototype.componentWillMount=function componentWillMount(){var edit=this.state.edit;var locationId=this.props.params.id;if(edit===true){(0,_locations.loadLocation)(locationId).then(function(locationSnapshot){console.log('LOADED!',locationSnapshot);});}};LocationForm.prototype.getSchema=function getSchema(){return[{title:"Country",id:"country",type:"select",default:"kuwait",props:{componentClass:"select",name:"country",options:[{id:"kuwait",title:"Kuwait"},{id:"egypt",title:"Egypt"},{id:"ksa",title:"KSA"},{id:"qatar",title:"Qatar"}]}},{title:"State",id:"title",type:"text",props:{type:"text",name:"title"}},{title:"Areas",id:"areas",type:"dynamic",props:{title:"Area",type:"text",placeholder:"Area title ..."}}];};LocationForm.prototype.onSubmit=function onSubmit(values){var locationTitle=values.title;(0,_areas.push)(values.areas).then(function(snapshot){var locationId=(0,_locations.push)({title:locationTitle});var areaIds=snapshot.map(function(area){return area.areaId;});(0,_locationAreas.set)(locationId,areaIds);});};LocationForm.prototype.render=function render(){var schema=this.getSchema();return _react2.default.createElement(_rubix.PanelContainer,{noOverflow:true},_react2.default.createElement(_rubix.Panel,null,_react2.default.createElement(_rubix.PanelHeader,{className:'bg-green fg-white'},_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement('h3',null,'Add new location '))))),_react2.default.createElement(_rubix.PanelBody,null,_react2.default.createElement(_rubix.Grid,null,_react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{xs:12},_react2.default.createElement(_FormBuilder2.default,{schema:schema,onSubmit:this.onSubmit})))))));};return LocationForm;}(_react2.default.Component);LocationForm.contextTypes={langs:_react2.default.PropTypes.array};var ManageLocations=(0,_reactRouter.withRouter)(_class=function(_React$Component2){(0,_inherits3.default)(ManageLocations,_React$Component2);function ManageLocations(){(0,_classCallCheck3.default)(this,ManageLocations);return(0,_possibleConstructorReturn3.default)(this,_React$Component2.apply(this,arguments));}ManageLocations.prototype.render=function render(){return _react2.default.createElement(_rubix.Row,null,_react2.default.createElement(_rubix.Col,{sm:6,collapseRight:true},_react2.default.createElement(LocationForm,this.props)));};return ManageLocations;}(_react2.default.Component))||_class;exports.default=ManageLocations;;(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(LocationForm,'LocationForm','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/routes/Locations/Manage.js');__REACT_HOT_LOADER__.register(ManageLocations,'ManageLocations','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/routes/Locations/Manage.js');})();;
 
 /***/ },
 /* 717 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;exports.addData=addData;exports.pushData=pushData;exports.update=update;exports.getData=getData;exports.removeData=removeData;var _firebase=__webpack_require__(583);var _firebase2=_interopRequireDefault(_firebase);var _q=__webpack_require__(718);var _q2=_interopRequireDefault(_q);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function addData(ref,data){return _firebase2.default.database().ref(ref).set(data);}function pushData(ref,data){console.log('Pushing Data to REF '+ref,data);return _firebase2.default.database().ref(ref).push(data).key;}function update(ref,data){return _firebase2.default.database().ref(ref).update(data);}function getData(ref){var def=_q2.default.defer();setTimeout(function(){return _q2.default.resolve();},2000);return def.promise;}function removeData(ref){return _firebase2.default.database().ref(ref).remove();};(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(addData,'addData','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/data.js');__REACT_HOT_LOADER__.register(pushData,'pushData','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/data.js');__REACT_HOT_LOADER__.register(update,'update','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/data.js');__REACT_HOT_LOADER__.register(getData,'getData','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/data.js');__REACT_HOT_LOADER__.register(removeData,'removeData','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/data.js');})();;
+	'use strict';exports.__esModule=true;exports.push=push;exports.load=load;var _data=__webpack_require__(718);var _translation=__webpack_require__(720);var _q=__webpack_require__(719);var _q2=_interopRequireDefault(_q);var _lodash=__webpack_require__(721);var _lodash2=_interopRequireDefault(_lodash);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function push(areas){var Ids=[];var promises=[];var deferAreas=_q2.default.defer();console.log('Pushing areas',areas);_lodash2.default.forEach(areas,function(title,k){var deferred=_q2.default.defer();var areaId=(0,_data.pushData)('areas',{title:title});(0,_translation.addTranslation)('areas/'+areaId,{title:title});Ids.push({areaId:{title:title}});deferred.resolve(areaId);promises.push(deferred.promise);});console.log(Ids);_q2.default.all(promises).then(function(){deferAreas.resolve(Ids);}).catch(function(e){return deferAreas.reject();});return deferAreas.promise;}function load(areasIds){var promises=[];var areas=[];var defered=_q2.default.defer();_lodash2.default.forEach(areasIds,function(areaId,k){var defer=_q2.default.defer();(0,_data.getData)('areas/'+areaId).then(function(area){defer.resolve(area);areas.push(area);}).catch(function(e){return defer.reject();});promises.push(defer.promise);});_q2.default.all(promises).then(function(){return defered.resolve(areas);}).catch(function(e){return defered.reject();});return defered.promise;};(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(push,'push','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/areas.js');__REACT_HOT_LOADER__.register(load,'load','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/areas.js');})();;
 
 /***/ },
 /* 718 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';exports.__esModule=true;exports.addData=addData;exports.pushData=pushData;exports.update=update;exports.getData=getData;exports.removeData=removeData;var _firebase=__webpack_require__(583);var _firebase2=_interopRequireDefault(_firebase);var _q=__webpack_require__(719);var _q2=_interopRequireDefault(_q);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}function addData(ref,data){return _firebase2.default.database().ref(ref).set(data);}function pushData(ref,data){console.log('Pushing Data to REF '+ref,data);return _firebase2.default.database().ref(ref).push(data).key;}function update(ref,data){return _firebase2.default.database().ref(ref).update(data);}function getData(ref){console.log('Retreiving',ref);return _firebase2.default.database().ref(ref).once('value');}function removeData(ref){return _firebase2.default.database().ref(ref).remove();};(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(addData,'addData','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/data.js');__REACT_HOT_LOADER__.register(pushData,'pushData','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/data.js');__REACT_HOT_LOADER__.register(update,'update','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/data.js');__REACT_HOT_LOADER__.register(getData,'getData','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/data.js');__REACT_HOT_LOADER__.register(removeData,'removeData','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/data.js');})();;
+
+/***/ },
+/* 719 */
 /***/ function(module, exports) {
 
 	module.exports = require("q");
 
 /***/ },
-/* 719 */
+/* 720 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;exports.addTranslation=addTranslation;var _data=__webpack_require__(717);var _lodash=__webpack_require__(720);var _lodash2=_interopRequireDefault(_lodash);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var langs=['ar','en'];var defaultLang='en';function addTranslation(ref,data){console.log('adding translation for default lang',defaultLang);(0,_data.addData)('translations/'+ref+'/'+defaultLang,data);};(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(langs,'langs','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/translation.js');__REACT_HOT_LOADER__.register(defaultLang,'defaultLang','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/translation.js');__REACT_HOT_LOADER__.register(addTranslation,'addTranslation','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/translation.js');})();;
+	'use strict';exports.__esModule=true;exports.addTranslation=addTranslation;var _data=__webpack_require__(718);var _lodash=__webpack_require__(721);var _lodash2=_interopRequireDefault(_lodash);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}var langs=['ar','en'];var defaultLang='en';function addTranslation(ref,data){console.log('adding translation for default lang',defaultLang);(0,_data.addData)('translations/'+ref+'/'+defaultLang,data);};(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(langs,'langs','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/translation.js');__REACT_HOT_LOADER__.register(defaultLang,'defaultLang','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/translation.js');__REACT_HOT_LOADER__.register(addTranslation,'addTranslation','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/translation.js');})();;
 
 /***/ },
-/* 720 */
+/* 721 */
 /***/ function(module, exports) {
 
 	module.exports = require("lodash");
 
 /***/ },
-/* 721 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';exports.__esModule=true;exports.push=push;exports.loadLocation=loadLocation;exports.remove=remove;var _data=__webpack_require__(717);var _translation=__webpack_require__(719);function push(data){console.log('Pushing location',data);var locationId=(0,_data.pushData)('locations',data);(0,_translation.addTranslation)('locations/'+locationId,{title:data.title});return locationId;}function loadLocation(locationId){return(0,_data.getData)('locations/'+locationId);}function remove(locationId){return(0,_data.removeData)('locations/'+locationId);};(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(push,'push','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/locations.js');__REACT_HOT_LOADER__.register(loadLocation,'loadLocation','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/locations.js');__REACT_HOT_LOADER__.register(remove,'remove','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/locations.js');})();;
-
-/***/ },
 /* 722 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';exports.__esModule=true;exports.push=push;exports.set=set;exports.remove=remove;exports.load=load;var _data=__webpack_require__(717);function push(data){return(0,_data.pushData)('location-areas',data);}function set(id,data){console.log('Setting Location for areas',data);return(0,_data.addData)('location-areas/'+id,data);}function remove(id){return(0,_data.removeData)('location-areas',id);}function load(locationId){console.log('load location areas for location',locationId);return(0,_data.getData)('location-areas/'+locationId);};(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(push,'push','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/locationAreas.js');__REACT_HOT_LOADER__.register(set,'set','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/locationAreas.js');__REACT_HOT_LOADER__.register(remove,'remove','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/locationAreas.js');__REACT_HOT_LOADER__.register(load,'load','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/locationAreas.js');})();;
+	'use strict';exports.__esModule=true;exports.push=push;exports.loadLocation=loadLocation;exports.loadLocations=loadLocations;exports.remove=remove;var _data=__webpack_require__(718);var _translation=__webpack_require__(720);function push(data){console.log('Pushing location',data);var locationId=(0,_data.pushData)('locations',data);(0,_translation.addTranslation)('locations/'+locationId,{title:data.title});return locationId;}function loadLocation(locationId){return(0,_data.getData)('locations/'+locationId);}function loadLocations(){return(0,_data.getData)('locations');}function remove(locationId){return(0,_data.removeData)('locations/'+locationId);};(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(push,'push','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/locations.js');__REACT_HOT_LOADER__.register(loadLocation,'loadLocation','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/locations.js');__REACT_HOT_LOADER__.register(loadLocations,'loadLocations','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/locations.js');__REACT_HOT_LOADER__.register(remove,'remove','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/locations.js');})();;
 
 /***/ },
 /* 723 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';exports.__esModule=true;exports.push=push;exports.set=set;exports.remove=remove;exports.load=load;var _data=__webpack_require__(718);function push(data){return(0,_data.pushData)('location-areas',data);}function set(id,data){console.log('Setting Location for areas',data);return(0,_data.addData)('location-areas/'+id,data);}function remove(id){return(0,_data.removeData)('location-areas',id);}function load(locationId){console.log('load location areas for location',locationId);return(0,_data.getData)('location-areas/'+locationId);};(function(){if(typeof __REACT_HOT_LOADER__==='undefined'){return;}__REACT_HOT_LOADER__.register(push,'push','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/locationAreas.js');__REACT_HOT_LOADER__.register(set,'set','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/locationAreas.js');__REACT_HOT_LOADER__.register(remove,'remove','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/locationAreas.js');__REACT_HOT_LOADER__.register(load,'load','/Users/tamerel-sayed/Desktop/simsar/rubix/node-seed/src/model/locationAreas.js');})();;
+
+/***/ },
+/* 724 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52109,17 +52115,17 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _reactRouter = __webpack_require__(246);
 	
-	var _reactHotLoader = __webpack_require__(724);
+	var _reactHotLoader = __webpack_require__(725);
 	
-	var _reactRouterScroll = __webpack_require__(725);
+	var _reactRouterScroll = __webpack_require__(726);
 	
 	var _reactRouterScroll2 = _interopRequireDefault(_reactRouterScroll);
 	
-	var _onRouterSetup = __webpack_require__(731);
+	var _onRouterSetup = __webpack_require__(732);
 	
 	var _onRouterSetup2 = _interopRequireDefault(_onRouterSetup);
 	
-	var _checkScroll = __webpack_require__(733);
+	var _checkScroll = __webpack_require__(734);
 	
 	var _checkScroll2 = _interopRequireDefault(_checkScroll);
 	
@@ -52205,13 +52211,13 @@ require('source-map-support').install({environment: 'node'});
 	}
 
 /***/ },
-/* 724 */
+/* 725 */
 /***/ function(module, exports) {
 
 	module.exports = require("react-hot-loader");
 
 /***/ },
-/* 725 */
+/* 726 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52223,7 +52229,7 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ScrollBehaviorContainer = __webpack_require__(726);
+	var _ScrollBehaviorContainer = __webpack_require__(727);
 	
 	var _ScrollBehaviorContainer2 = _interopRequireDefault(_ScrollBehaviorContainer);
 	
@@ -52246,7 +52252,7 @@ require('source-map-support').install({environment: 'node'});
 	module.exports = exports['default'];
 
 /***/ },
-/* 726 */
+/* 727 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52257,7 +52263,7 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _ScrollBehavior = __webpack_require__(727);
+	var _ScrollBehavior = __webpack_require__(728);
 	
 	var _ScrollBehavior2 = _interopRequireDefault(_ScrollBehavior);
 	
@@ -52338,7 +52344,7 @@ require('source-map-support').install({environment: 'node'});
 
 
 /***/ },
-/* 727 */
+/* 728 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52361,13 +52367,13 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _scrollTop2 = _interopRequireDefault(_scrollTop);
 	
-	var _requestAnimationFrame = __webpack_require__(728);
+	var _requestAnimationFrame = __webpack_require__(729);
 	
 	var _requestAnimationFrame2 = _interopRequireDefault(_requestAnimationFrame);
 	
-	var _Actions = __webpack_require__(729);
+	var _Actions = __webpack_require__(730);
 	
-	var _DOMStateStorage = __webpack_require__(730);
+	var _DOMStateStorage = __webpack_require__(731);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -52545,7 +52551,7 @@ require('source-map-support').install({environment: 'node'});
 	module.exports = exports['default'];
 
 /***/ },
-/* 728 */
+/* 729 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52596,7 +52602,7 @@ require('source-map-support').install({environment: 'node'});
 	module.exports = compatRaf;
 
 /***/ },
-/* 729 */
+/* 730 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -52623,7 +52629,7 @@ require('source-map-support').install({environment: 'node'});
 	var POP = exports.POP = 'POP';
 
 /***/ },
-/* 730 */
+/* 731 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52713,7 +52719,7 @@ require('source-map-support').install({environment: 'node'});
 	};
 
 /***/ },
-/* 731 */
+/* 732 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52727,7 +52733,7 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _isBrowser2 = _interopRequireDefault(_isBrowser);
 	
-	__webpack_require__(732);
+	__webpack_require__(733);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -52792,7 +52798,7 @@ require('source-map-support').install({environment: 'node'});
 	}
 
 /***/ },
-/* 732 */
+/* 733 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -53019,7 +53025,7 @@ require('source-map-support').install({environment: 'node'});
 	}
 
 /***/ },
-/* 733 */
+/* 734 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53033,11 +53039,11 @@ require('source-map-support').install({environment: 'node'});
 	
 	var _isBrowser2 = _interopRequireDefault(_isBrowser);
 	
-	var _onRouterUpdate = __webpack_require__(734);
+	var _onRouterUpdate = __webpack_require__(735);
 	
 	var _onRouterUpdate2 = _interopRequireDefault(_onRouterUpdate);
 	
-	var _ga = __webpack_require__(735);
+	var _ga = __webpack_require__(736);
 	
 	var _ga2 = _interopRequireDefault(_ga);
 	
@@ -53065,7 +53071,7 @@ require('source-map-support').install({environment: 'node'});
 	}
 
 /***/ },
-/* 734 */
+/* 735 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53111,7 +53117,7 @@ require('source-map-support').install({environment: 'node'});
 	}
 
 /***/ },
-/* 735 */
+/* 736 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53138,7 +53144,7 @@ require('source-map-support').install({environment: 'node'});
 	};
 
 /***/ },
-/* 736 */
+/* 737 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

@@ -4,10 +4,10 @@ import pull from 'lodash/pull';
 import remove from 'lodash/remove';
 import {withRouter} from 'react-router';
 
-import FormBuilder from '../form/FormBuilder';
-import { push as pushArea} from '../model/areas';
-import { push as pushLocation, loadLocation} from '../model/locations';
-import { set as setLocationAreas } from '../model/locationAreas';
+import FormBuilder from '../../form/FormBuilder';
+import { push as pushArea} from '../../model/areas';
+import { push as pushLocation, loadLocation} from '../../model/locations';
+import { set as setLocationAreas } from '../../model/locationAreas';
 
 
 import {
@@ -34,8 +34,8 @@ class LocationForm extends React.Component {
     const locationId = this.props.params.id;
 
     if(edit === true){
-      loadLocation(locationId).then(locationSnapshot => {
-        console.log('LOADED!',locationSnapshot);
+      loadLocation(locationId).then(locationSnapshot =>{
+        console.log('LOADED!', locationSnapshot);
       })
     }
 
@@ -73,13 +73,12 @@ class LocationForm extends React.Component {
         }
       },
       {
-        title: "Title",
+        title: "State",
         id: "title",
         type: "text",
         props: {
           type: "text",
-          name: "title",
-          placeholder: "Location title"
+          name: "title"
         }
       },
       {
@@ -97,7 +96,6 @@ class LocationForm extends React.Component {
   }
 
   onSubmit(values){
-    console.log('Values', values);
     let locationTitle = values.title;
     pushArea(values.areas).then(snapshot =>{
       let locationId = pushLocation({title: locationTitle});
@@ -141,7 +139,7 @@ LocationForm.contextTypes = {
 };
 
 @withRouter
-export default class Locations extends React.Component {
+export default class ManageLocations extends React.Component {
 
   render(){
     return (

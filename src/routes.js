@@ -10,15 +10,16 @@ import Sidebar from './common/sidebar';
 
 import Home from './routes/home';
 import Login from './routes/Login';
-import Locations from './routes/Locations';
+import Locations from './routes/Locations/index';
+import ManageLocations from './routes/Locations/Manage';
 
 class App extends React.Component {
   render(){
     return (
         <MainContainer {...this.props}>
-          <Sidebar />
-          <Header />
           <div id='body'>
+            <Header />
+            <Sidebar />
             <Grid>
               <Row>
                 <Col xs={12}>
@@ -38,12 +39,14 @@ export default (
     <Route>
       <Route>
         <Route path='login' component={Login}/>
+        <Route path="locations" component={Locations}/>
+
       </Route>
 
       <Route path='/' component={App}>
         <IndexRoute component={Home}/>
-        <Route path="locations" component={Locations}/>
-        <Route path="locations/:id" component={Locations}/>
+        <Route path="locations/add" component={ManageLocations}/>
+        <Route path="locations/:id" component={ManageLocations}/>
       </Route>
     </Route>
 );

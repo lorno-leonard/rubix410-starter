@@ -15,6 +15,10 @@ export function loadLocation(locationId){
 }
 
 
+export function loadLocations(){
+  return getData('locations');
+}
+
 export function remove(locationId){
   return removeData(`locations/${locationId}`);
 }

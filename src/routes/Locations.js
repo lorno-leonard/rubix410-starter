@@ -3,6 +3,7 @@ import forEach from 'lodash/foreach';
 import pull from 'lodash/pull';
 import remove from 'lodash/remove';
 import {withRouter} from 'react-router';
+
 import FormBuilder from '../form/FormBuilder';
 import { push as pushArea} from '../model/areas';
 import { push as pushLocation, loadLocation} from '../model/locations';
@@ -12,25 +13,10 @@ import { set as setLocationAreas } from '../model/locationAreas';
 import {
     Row,
     Col,
-    Nav,
     Grid,
-    Icon,
     Panel,
-    Radio,
-    Button,
-    MenuItem,
-    Checkbox,
-    HelpBlock,
     PanelBody,
-    FormGroup,
-    InputGroup,
-    SplitButton,
     PanelHeader,
-    ButtonGroup,
-    FormControl,
-    PanelFooter,
-    ControlLabel,
-    DropdownButton,
     PanelContainer,
 } from '@sketchpixy/rubix';
 

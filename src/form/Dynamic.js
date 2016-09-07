@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
 import InputField from './Input';
 import Select from './Select';
-import {Button} from '@sketchpixy/rubix';
+import {Button,Grid,Row,Col,BPanel} from '@sketchpixy/rubix';
 
 const Fields = ({ fields,type,title,id,onRemoveField }) =>{
 
@@ -19,13 +19,29 @@ const Fields = ({ fields,type,title,id,onRemoveField }) =>{
 
             switch(type){
               case 'text':
-                resultField = <InputField key={`${title}[${k}]`} type="text" name={`${id}[${k}]`}/>;
+                resultField =
+                    <InputField type="text"
+                                controlId={`${id}[${k}]`}
+                                label={title}
+                                type="text"
+                                name={`${id}[${k}]`}/>;
                 break;
               case 'select':
-                resultField = <Select key={`${title}[${k}]`} name={`${title}[${k}]`}/>;
+                resultField = <Select controlId={`${id}[${k}]`} label={title} name={`${title}[${k}]`}/>;
                 break;
             }
-            return <div> {resultField} <Button href="#" bsStyle="danger" onClick={e=>onRemove(e,k)}>X</Button></div>
+            return <Grid key={`${title}[${k}]`} style={{paddingTop:"15px"}}>
+              <Row>
+                <BPanel>
+                  <Col md={10}>
+                    {resultField}
+                  </Col>
+                  <Col md={2} style={{paddingTop:"25px"}}>
+                    <Button href="#" bsStyle="danger" onClick={e=>onRemove(e,k)}>X</Button>
+                  </Col>
+                </BPanel>
+              </Row>
+            </Grid>
           })
         }
       </div>
@@ -54,9 +70,13 @@ export default class Dynamic extends Component {
 
     return (
         <div>
-          <Button bsStyle="primary" type="button" onClick={()=>this.appendField()}>Add {title} </Button>
+          <div className="clearfix">
+            <Button bsClass="pull-right btn-primary btn-default btn" type="button"
+                    onClick={()=>this.appendField()}>Add {title} </Button>
+          </div>
           <Fields fields={fields} id={id} type={type} title={title} onRemoveField={(pos)=>this.removeField(pos)}/>
         </div>
+
     )
 
   }

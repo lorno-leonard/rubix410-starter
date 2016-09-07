@@ -10,28 +10,38 @@ import Dynamic from './Dynamic';
 class FormBuilder extends React.Component {
 
   render(){
-    const { schema,onSubmit } = this.props;
+    const { schema,onSubmit,isCancel,submitText } = this.props;
 
     return (
         <Form onSubmit={onSubmit}>
           {schema.map((field, k) =>{
             switch(field.type){
               case 'text':
-                return <InputField key={k} type="text" id={field.id} {...field.props} />;
+                return <InputField key={k} type={field.type} id={field.id} label={field.title}
+                                   controlId={field.id} {...field.props} />;
               case 'select':
-                return <Select key={k} value={field.default} {...field.props} />;
+                return <Select key={k} value={field.default} label={field.title}
+                               controlId={field.id} {...field.props} />;
               case "dynamic":
-                return <Dynamic id={field.id} key={k} {...field.props} />;
+                return <Dynamic id={field.id} key={k} controlId={field.id} {...field.props} />;
                 break;
             }
           })}
-          <Button type="submit"  bsStyle='lightgreen'>cancel</Button>{' '}
-          <button className="btn-primary btn btn-default">submit</button>
+          <div style={{margin:"10px 0"}}>
+            {isCancel && <Button type="submit" bsStyle='lightgreen'>cancel</Button>}
+            {' '}
+            <button className="btn-primary btn btn-default">{submitText}</button>
+          </div>
         </Form>
     );
 
 
   }
+}
+
+FormBuilder.defaultProps = {
+  isCancel: true,
+  submitText: "submit"
 }
 
 FormBuilder.propTypes = {

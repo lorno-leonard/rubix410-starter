@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import q from 'q';
 
 export function addData(ref, data){
   return firebase.database().ref(ref).set(data);
@@ -14,8 +15,11 @@ export function update(ref, data){
 }
 
 export function getData(ref){
-  console.log('Retrieving', ref);
-  return firebase.database().ref(ref).remove();
+  let def = q.defer();
+
+  setTimeout(() => q.resolve(), 2000);
+
+  return def.promise;
 }
 
 export function removeData(ref){

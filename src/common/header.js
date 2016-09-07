@@ -9,7 +9,7 @@ class Brand extends React.Component {
       <Navbar.Header {...this.props}>
         <Navbar.Brand tabIndex='-1'>
           <a href='#'>
-            <img src='/imgs/common/logo.png' alt='rubix' width='111' height='28' />
+            Simsar.com
           </a>
         </Navbar.Brand>
       </Navbar.Header>

@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router';
 import Firebase from 'firebase';
 import { Form } from 'formsy-react';
 
-import InputField from '../form/Input';
+import FormBuilder from '../form/FormBuilder';
 
 import {
     Row,
@@ -17,7 +17,6 @@ import {
     PanelBody,
     FormGroup,
     LoremIpsum,
-    InputGroup,
     FormControl,
     ButtonGroup,
     ButtonToolbar,
@@ -50,10 +49,31 @@ export default class Login extends React.Component {
     $('html').removeClass('authentication');
   }
 
-  getPath(path){
-    var dir = this.props.location.pathname.search('rtl') !== -1 ? 'rtl' : 'ltr';
-    path = `/${dir}/${path}`;
-    return path;
+  getSchema(){
+
+    return [
+      {
+        title: "Username",
+        id: "country",
+        type: "text",
+        default: "kuwait",
+        props: {
+          componentClass: "select",
+          name: "username"
+        }
+      },
+      {
+        title: "Password",
+        id: "password",
+        type: "text",
+        props: {
+          type: "password",
+          name: "password",
+          placeholder: "******"
+        }
+      }
+
+    ]
   }
 
   setResult(message, type){
@@ -69,23 +89,20 @@ export default class Login extends React.Component {
 
   goLogin(){
     this.setResult("You are successfully logged in, please wait... ", "success")
-    setTimeout( _ => this.props.router.push(this.getPath('dashboard')),2000);
+    setTimeout(_ => this.props.router.push('/'), 2000);
   }
 
-  submitLogin(e){
-    console.log("Authntication with:",this.state);
-
-    e.preventDefault();
-    e.stopPropagation();
-
-    const { email,password } = this.state;
-    Firebase.auth().signInWithEmailAndPassword(email, password)
+  onSubmit(values){
+    console.log("Authntication with:", values);
+    const { username,password } = values;
+    Firebase.auth().signInWithEmailAndPassword(username, password)
         .then(_ => this.goLogin())
         .catch(e => this.setResult(e.message, "danger"))
   }
 
   render(){
     const result = this.state.result !== null ? ::this.renderResult() : null;
+    const schema = this.getSchema();
 
     return (
         <div id='auth-container' className='login'>
@@ -106,11 +123,10 @@ export default class Login extends React.Component {
 
                             <div
                                 style={{padding: 25, paddingTop: 0, paddingBottom: 0, margin: 'auto', marginBottom: 25, marginTop: 25}}>
-                              <Form onSubmit={::this.submitLogin}>
-                                <InputField name="username" />
-                                <InputField name="password" />
-
-                              </Form>
+                              <FormBuilder submitText={"Login"}
+                                           schema={schema}
+                                           isCancel={false}
+                                           onSubmit={::this.onSubmit}/>
                             </div>
                           </div>
                         </PanelBody>

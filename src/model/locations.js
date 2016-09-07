@@ -11,9 +11,7 @@ export function push(data){
 }
 
 export function loadLocation(locationId){
-  let data = getData(`locations/${locationId}`);
-
-  console.log(data);
+  return getData(`locations/${locationId}`);
 }
 
 

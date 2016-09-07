@@ -48,7 +48,9 @@ class LocationForm extends React.Component {
     const locationId = this.props.params.id;
 
     if(edit === true){
-      loadLocation(locationId)
+      loadLocation(locationId).then(locationSnapshot => {
+        console.log('LOADED!',locationSnapshot);
+      })
     }
 
   }
